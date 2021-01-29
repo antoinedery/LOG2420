@@ -136,6 +136,12 @@ body {
   display: table-cell;
 }
 
-.bottom-letf{
-  margin:15px 0 0px 20px;
+.logo_montreal-btn{
+  width: 129px;
+  height: 26px;
+}
+
+.logo_brasserie-btn{
+  width: 129px;
+  height: 45px;
 }
