@@ -11,16 +11,20 @@ body {
   color: white;
   background-color: rgb(0, 140, 140);
   font-weight: 400;
-}
-
-.upper-top-container {
-  height: 60px;
   position: relative;
 }
 
-.lower-top-container {
-  height: 60px;
-  position: relative;
+.left-top-container{
+  display: inline-block;
+}
+
+.middle-top-container {
+  text-align: center;
+  display: inline-block;
+}
+
+.right-top-container {
+  display: inline-block;
 }
 
 .left-logout {
@@ -42,8 +46,9 @@ body {
 }
 
 .upper-text {
-  margin: 0;
+  margin:0;
   font-size: 14px;
+  text-align:left;
 }
 
 .title {
@@ -62,38 +67,40 @@ body {
   font-size: 24px;
   width: 181px;
   height: 28px;
-  left: 531px;
-  top: 13px;
 }
 
 .middle-container {
   background-color: rgb(228, 228, 228);
+  text-align: justify;
+  height: 462px;
+}
+
+h1{
   color: #333333;
   font-size: 24px;
   font-weight: bold;
-  text-align: justify;
-  height: 462px;
+  margin : 0;
+  display: inline-block;
 }
 
 .middle-left-container {
   width: 812px;
   display: table-cell;
-}
-
-.middle-left-title {
-  width: 114px;
-  height: 28px;
-  margin: 15px 0 0px 20px;
+  padding-left:21px;
+  padding-right:21px;
+  padding-top: 15px;
 }
 
 .middle-left-news-title {
   font-size: 18px;
-  margin: 15px 0 0 20px;
+  display: inline-block;
+  margin-top: 15px;
 }
 
 .middle-left-text {
   font-size: 13px;
-  margin: 0 20px 30px 20px;
+  margin-top: 0px;
+  margin-bottom: 15px;
   font-weight: normal;
 }
 
@@ -107,23 +114,24 @@ body {
   height: 462px;
 }
 
-.middle-right-title {
-  width: 266x;
-  height: 27px;
-}
-
 .bottom-container {
   background-color: rgb(239, 239, 239);
   height: 390px;
-  color: #333333;
-  font-size: 24px;
-  font-weight: bold;
+  text-align: left;
+  padding-top: 15px;
 }
 
 .bottom-left-container {
   width: 469px;
   height: 390px;
   display: table-cell;
+  padding-left: 17px;
+}
+
+h5
+{
+  font-family: 'Roboto Bold', 'Roboto Regular', 'Roboto', sans-serif;
+  font-size: 18px;
 }
 
 .bottom-middle-container {
@@ -136,9 +144,21 @@ body {
   display: table-cell;
 }
 
+.bottom-right-text
+{
+  font-size:14px;
+  font-weight: normal;
+  margin-top: -5px;
+  text-decoration: inherit;
+  color: inherit;
+}
+
 .logo_montreal-btn{
+  padding-top: 30px;
+  margin-bottom:0;
   width: 129px;
   height: 26px;
+  text-align: left;
 }
 
 .logo_brasserie-btn{
