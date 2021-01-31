@@ -114,6 +114,25 @@ h1{
   height: 462px;
 }
 
+.box-title{
+  border-width: 0px;
+  margin: -5px;
+  left: 199px; 
+  width: 159px;
+  height: 27px;
+  font-size: 17px;
+}
+
+.box-comment {
+  border: none;
+  resize: none;
+  left: 875px;
+  top: 432px;
+  width: 289px;
+  height: 79px;
+}
+
+
 .bottom-container {
   background-color: rgb(239, 239, 239);
   height: 390px;
