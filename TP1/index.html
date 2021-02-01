@@ -6,38 +6,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="https://d1h0x9w88ijkiq.cloudfront.net/3717a/images/favicon_play.ico" />
         <link rel="stylesheet" href="styles.css">
+        <script src= "data.js"></script>
         <title>Accueil_service</title>
     </head>
 
     <body>
         <!-- Container-->
-        <div class="top-container">
-            <div class="left-top-container">
-              <div class="left-logout">
-                <img class="logout-btn" src="icons/logout.svg" alt="logout-img">
-                <p class="upper-text">Public</p>
-              </div>
-            </div>
-
-            <div class="center-top-container">
-              <div class="title">Frigoscommunautaires</div>
-              <div class="subtitle">Espace entretien</div>
-            </div>
-
-            <div class="right-top-container">
-                  <div class="right-logout">
-                      <img class="arrow-right-btn" src="icons/arrow_right.svg" alt="arrow-right img">
-                      <p class="upper-text">Mes frigos</p>
-                  </div>
+        
+          <table class="top-container">
+            <tr>
+              <td class="left-logout">
+                <div class="left-logout">
+                  <img class="logout-btn" src="icons/logout.svg" alt="logout-img">
+                  <p class="upper-text">Public</p>
                 </div>
-            </div>
-        </div>
-
+              </td>
+              <td>
+                <p class="title">Frigoscommunautaires</p>
+                <p class="subtitle">Espace entretien</p>
+              </td>
+              <td>
+                <div class="right-logout">
+                    <img class="arrow-right-btn" src="icons/arrow_right.svg" alt="arrow-right img">
+                    <p class="upper-text">Mes frigos</p>
+                </div>
+              </td>
+            </tr>
+          </table>
 
         <!-- Middle-left-container -->
         <div class="middle-container" class="title-font">
           <div class="middle-left-container">
-            <h1 class="middle-left-title">Nouvelles<h1>
+            <h1 class="middle-left-title" >Nouvelles<h1>
 
               <!-- Nouvelle 1 -->
               <div class="middle-left-news-title">Nouveau site Web transactionnel</div>
@@ -65,12 +65,29 @@
 
           <div class="middle-right-container">
             <h1 class="middle-right-title">Commande du matériel</h1>
-                <!-- Autres --> 
+            <!-- Counters -->
+            <br>
+            <input type="number" name="Savon" value="0" class="button-counter">
+            <img src="icons/arrow_up.svg" class="arrow-up" alt="arrow-up-img">
+            <label>Savon</label><br>
+            <img src="icons/arrow_down.svg" class="arrow-down" alt="arrow-down-img">
+
+            <input type="number" name="Guenilles" value="0" class="button-counter">
+            <label>Guenilles</label><br>
+
+            <input type="number" name="Désodorisant" value="0" class="button-counter">
+            <label>Désodorisant</label><br>
+            
+            <input type="number" name="Ampoules" value="0" class="button-counter">
+            <label>Ampoules</label><br>
+
+                <!-- Autres -->
                 <div> 
-                  <p class="box-title">Autres: </p>   
+                  <p class="box-title">Autres:</p>
                   <textarea class="box-comment"></textarea>
                 </div>
-               
+                <button class= "button">Commander</button>
+
                 
           </div>
         </div>
@@ -90,15 +107,15 @@
               <div>
               <h1>Bottin</h1><br><br>
                 <div class="personnel">Michel Gagnon - Gestionnaire entretien</div>
-                <div class="courriel">michel.gagnon.967@gmail.com</div><br>
+                <div class="courriel">michel.gagnon.967@gmail.com &nbsp;<img src="icons/copy.svg" alt="copy-img"></div><br>
                 <div class="personnel">Simon Tremblay - Préposé entretien</div>
-                <div class="courriel">stremblay3450@videotron.ca</div><br>
+                <div class="courriel">stremblay3450@videotron.ca  &nbsp; <img src="icons/copy.svg" alt="copy-img"></div><br>
                 <div class="personnel">Robert Roy - Préposé entretien</div>
-                <div class="courriel">robert.roy345@outlook.com</div><br>
+                <div class="courriel">robert.roy345@outlook.com &nbsp; <img src="icons/copy.svg" alt="copy-img"></div><br>
                 <div class="personnel">Fanny Côté - Préposé entretien</div>
-                <div class="courriel">fcote3450@videotron.ca</div><br>
+                <div class="courriel">fcote3450@videotron.ca &nbsp; <img src="icons/copy.svg" alt="copy-img"></div><br>
                 <div class="personnel">Robert Morin - Préposé entretien</div>
-                <div class="courriel">rrmorin3450@videotron.ca</div>
+                <div class="courriel">rrmorin3450@videotron.ca  &nbsp; <img src="icons/copy.svg" alt="copy-img"></div>
             </div>
           </div>
 
@@ -111,18 +128,13 @@
               </div>
               
               <div>
-                <a href="https://mabrasserie.com/" target="_blank"><div class="second-item"><img class="logo_brasserie-btn" src="icons/logo_brasserie.png" alt="logo_brasserie-img"></a>
-                  <p class= "bottom-right-text">2300, rue Holt, Montréal (QC) H2G 1Y4
-                  </br>info@mabrasserie.com
-                  </br>(514) 508-3309</p>
-                  </div>
+                <a href="https://mabrasserie.com/" target="_blank">
+                <div class="second-item"><img class="logo_brasserie-btn" src="icons/logo_brasserie.png" alt="logo_brasserie-img"></a>
                 </a>
+                  <p class= "bottom-right-text"><a href="https://mabrasserie.com/" target="_blank">2300, rue Holt, Montréal (QC) H2G 1Y4<br>info@mabrasserie.com<br>(514) 508-3309</a></p>
+                  </div>
               </div>
-
-
           </div>
-
         </div>
-
     </body>
 </html>
