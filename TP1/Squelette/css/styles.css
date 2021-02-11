@@ -5,6 +5,8 @@
 body{
     margin: 0;
     color: black;
+    text-align: justify;
+    background-color: lightgrey;
 }
 
 h1, h2, h3, p{
@@ -12,46 +14,49 @@ h1, h2, h3, p{
 }
 
 /* top container default style*/
-.top-container{
+.header{
     background-color: lightgreen;
     width: 100%;
     height: 13vh;
     display: flex;
-    align-items: center;
-    position: relative;
 }
 
 .title{
+    width: 60%;
     text-align: center;
-    line-height: 1.75;
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.logout-public, .logout-frigos{
-    position: absolute;
+[class*="logout-"]{
+    width: 20%;
+    padding: 15px;
+    display: flex;
 }
 
-.logout-public{
-    top: 10px;
-    left: 10px;
+.logout-left{
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
-.logout-frigos{
-    bottom: 10px;
-    right: 10px;
+.logout-right{
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 /*main window default styles*/
-.middle-container{
-    background-color: lightblue;
+[class*="-container"]{
     display: flex;
     justify-content: center;
+}
+
+.middle-container{
+    background-color: lightblue;
 }
 
 .bottom-container{
     background-color: lightgrey;
-    display: flex;
-    justify-content: center;
 }
 
 .content, .footer{
@@ -60,56 +65,39 @@ h1, h2, h3, p{
     max-width: 1080px;
 }
 
-/*Other elements*/
-[class*="col-"]{
-    padding: 15px;
+.partners{
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
+/*Other elements*/
+[class*="col-"] {padding: 15px;}
 .col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
 .col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
 @media only screen and (max-width: 800px){
-    .col-8 {width: 100%;}
-    .col-4 {width: 100%;}
-    .col-5 {width: 50%;}
-    .col-3 {width: 50%;}
+    .col-4, .col-8 {width: 100%;}
+    .col-12 {width: 50%;}
 }
 
 @media only screen and (max-width: 500px){
-    [class*="col-"]{
-        width: 100%;
-    }
+    .col-12 {width: 100%;}
 
-    .top-container{
-        position: fixed; 
-    }
-
-    .main-window{
-        position: absolute;
-        top: 13vh;
+    .scrollbar-wrapper{
         height: 87vh;
         overflow: overlay;
     }
 
-    .main-window::-webkit-scrollbar {
+    .scrollbar-wrapper::-webkit-scrollbar {
         width: 6px;
     }
 
-    .main-window::-webkit-scrollbar-track {
+    .scrollbar-wrapper::-webkit-scrollbar-track {
         background: rgba(0, 0, 0, 0);
     }
 
-    .main-window::-webkit-scrollbar-thumb {
+    .scrollbar-wrapper::-webkit-scrollbar-thumb {
         border-radius:5px;
         background: rgb(66, 66, 66);
     }
