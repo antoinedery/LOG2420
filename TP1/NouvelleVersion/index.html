@@ -5,6 +5,7 @@
         <link rel="shortcut icon" href="https://d1h0x9w88ijkiq.cloudfront.net/3717a/images/favicon_play.ico" />
         <title>Accueil_service</title>
         <link rel="stylesheet" href="css/styles.css">
+        <script src="js/script.js"></script>
     </head>
     <body>
         
@@ -32,7 +33,42 @@
                         <h2>Nouvelles</h2>
 
                         <ul>
-                            <li><h3>Nouvelle 1</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
+                            <li>
+                                <h3>Nouvelle 1</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
+                                    <div class="modal" id="idmodal">
+                                        <div class="modal-wrapper">
+                                            <div class="modal-content">
+                                                <div class= "modal-header">
+                                                    <h3>Nouvelle 1</h3>
+                                                    <button type="button" class="close-button">&times;</button> 
+                                                </div> 
+                                                <div class="modal-body">
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum saepe laborum omnis. Modi consequuntur consequatur aliquam magni voluptate voluptatum commodi pariatur voluptates illum labore dicta perferendis ipsum incidunt, minima ut! Illum impedit dolores 
+                                                    nulla earum aliquid voluptatibus repudiandae maxime hic, libero assumenda, ipsum minus expedita? Commodi dolores cum modi eligendi aut quasi voluptas, repudiandae consectetur voluptate omnis delectus quod eius quia, consequuntur nisi beatae dolorem architecto!
+                                                    Ab labore hic exercitationem error corrupti nostrum magni veritatis nam! Quisquam tempora sit nihil temporibus eveniet sunt dolore vero ipsam quas rem, reiciendis veritatis eligendi unde facilis ut enim atque, porro voluptas magni nisi odit repellat voluptatum!
+                                                    Excepturi modi architecto est laudantium minima blanditiis deserunt porro nostrum. Perferendis reprehenderit ut praesentium ex explicabo doloribus sit fuga illo voluptatem reiciendis similique ducimus temporibus necessitatibus ullam facere fugiat quas delectus, 
+                                                    alias dolorem maiores voluptas.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <!-- <div class="modal-box" id="modal">
+                                    <div class="active" id="overlay"></div>
+                                    <div class="modal-header">
+                                    <h3 data-model-target>Nouveau site Web transactionnel</h3>  
+                                    <button data-close-button class="close-button">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum saepe laborum omnis. Modi consequuntur consequatur aliquam magni voluptate voluptatum commodi pariatur voluptates illum labore dicta perferendis ipsum incidunt, minima ut! Illum impedit dolores 
+                                        nulla earum aliquid voluptatibus repudiandae maxime hic, libero assumenda, ipsum minus expedita? Commodi dolores cum modi eligendi aut quasi voluptas, repudiandae consectetur voluptate omnis delectus quod eius quia, consequuntur nisi beatae dolorem architecto!
+                                        Ab labore hic exercitationem error corrupti nostrum magni veritatis nam! Quisquam tempora sit nihil temporibus eveniet sunt dolore vero ipsam quas rem, reiciendis veritatis eligendi unde facilis ut enim atque, porro voluptas magni nisi odit repellat voluptatum!
+                                        Excepturi modi architecto est laudantium minima blanditiis deserunt porro nostrum. Perferendis reprehenderit ut praesentium ex explicabo doloribus sit fuga illo voluptatem reiciendis similique ducimus temporibus necessitatibus ullam facere fugiat quas delectus, 
+                                        alias dolorem maiores voluptas in possimus. Hic, voluptatem iure eos veritatis aliquid dolore quam vero quia aut aperiam, ab ipsum facere et possimus doloribus at culpa consequatur nobis unde. Magni et blanditiis atque enim quo fuga, necessitatibus fugit, 
+                                        repellendus maiores obcaecati distinctio adipisci magnam at minima tempore molestiae soluta suscipit, quod sequi fugiat eos nostrum vitae vero. Est, fugit?</p>
+                                    </div>
+                                </div> -->
+                                
                             <li><h3>Nouvelle 2</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
                             <li><h3>Nouvelle 3</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
                             <li><h3>Nouvelle 4</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
@@ -42,6 +78,8 @@
                     </div>
                     <div class="col-4 box-border">
                         <h2>Commande du matériel</h2> 
+                        <textarea class="box-comment"></textarea>
+                        <button id= "order-button">Commander</button>
                     </div>
                 </div>
             </div>
@@ -63,9 +101,10 @@
                             <li><h5>Michel Gagnon - Gestionnaire entretien</h5><p>michel.gagnon.967@gmail.com &nbsp;<img src="icons/copy.svg" alt="copy-img"></p></li>
                             <li><h5>Simon Tremblay - Préposé entretien</h5><p>stremblay3450@videotron.ca  &nbsp; <img src="icons/copy.svg" alt="copy-img"></p></li>
                             <li><h5>Robert Roy - Préposé entretien</h5><p>robert.roy345@outlook.com &nbsp; <img src="icons/copy.svg" alt="copy-img"></p></li>
-                            <li><h5>Fanny Côté - Préposé entretien</h5><p>fcote3450@videotron.ca &nbsp; <img src="icons/copy.svg" alt="copy-img"></p></li>
+                            <li><h5>Fanny Côté - Préposé entretien</h5><p>fcote3450@videotron.ca &nbsp; <img title = "popMessageHere" src="icons/copy.svg" alt="copy-img"></p></li>
                             <li><h5>Robert Morin - Préposé entretien</h5><p>rrmorin3450@videotron.ca  &nbsp; <img src="icons/copy.svg" alt="copy-img"></p></li>
                         </ul>
+                       
                     </div>
                     <div class="col-4">
                         <h2>Compostage et partenaires</h2> 
