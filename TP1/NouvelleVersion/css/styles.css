@@ -79,6 +79,100 @@ li
     text-align: center;
 }
 
+
+.order ul
+{
+    display:flex;
+    margin:10px 0; 
+    padding:0;
+}
+
+.order li
+{
+    list-style-type: none;
+    padding: 0;
+    margin:0;
+    align-self:center;
+}
+
+.input-box{
+    display:flex;
+    justify-content: flex-end;
+}
+
+.order input
+{
+    padding:10px;
+    text-align:left;
+    color: #8C8C8C;
+    font-size: 18px;
+    width: 80px;
+    border-radius: 5px;
+    border-color: transparent;
+    outline: none;
+    margin-left:15px;
+    display:flex; 
+}
+
+.stepper
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name
+{
+    display:flex;
+    align-items: center;
+}
+
+.stepper-img
+{
+    width:25px;
+    margin-top: 5.5px;
+    margin-bottom: 5.5px;
+    cursor: pointer;
+}
+
+.other-order
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order p
+{
+    font-weight: 400;
+    font-size:18px;
+    margin-left:30px;
+}
+
+.box-comment {
+    border: none;
+    resize: none;
+    outline: none;
+    width: 265px;
+    height: 79px;
+    font-size: inherit;
+    font-family: inherit;
+    
+}
+  
+#order-button {
+    background-color: rgb(0, 140, 140);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 10px 44px;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+    font-size: 19px;
+    margin: 4px 2px;
+}
+
+
 .bottom-container{
     background-color: rgb(239, 239, 239);
     display: flex;
@@ -156,31 +250,6 @@ a:link, a:visited, a:hover {
     height: 45px;
 }
 
-/* .box-comment {
-    border: none;
-    resize: none;
-    margin-top: 25px;
-    left: 875px;
-    top: 432px;
-    width: 289px;
-    height: 79px;
-    outline: none;
-    font-size: 18px;
-    font-family: "Arial", sans-serif;
-  }
-  
-  #order-button {
-    background-color: rgb(0, 140, 140);
-    border-radius: 5px;
-    border: none;
-    color: white;
-    padding: 10px 44px;
-    font-family: "Arial", sans-serif;
-    text-align: center;
-    font-size: 19px;
-    margin: 4px 2px;
-  }
-   */
 
 
 /*Other elements*/

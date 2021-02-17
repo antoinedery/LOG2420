@@ -60,8 +60,50 @@
                     </div>
                     <div class="col-4 box-border">
                         <h2>Commande du matériel</h2> 
-                        <!-- <textarea class="box-comment"></textarea>
-                        <button id= "order-button">Commander</button> -->
+                        <div class="order">
+                            <ul>
+                                <li class="input-box col-4"><input type="text" value="0" id="first-counter"></li>
+                                <li class="stepper col-2"> 
+                                    <img src="icons/arrow_up.svg" class="stepper-img" onclick="incrementCounter('first-counter')">
+                                    <img src="icons/arrow_down.svg" class="stepper-img" onclick="decrementCounter('first-counter')">
+                                </li>                                
+                                <li class="name col-6">Savon</li>
+                            </ul>   
+                            
+                            <ul>
+                                <li class="input-box col-4"><input type="text" value="0" id="second-counter"></li>
+                                <li class="stepper col-2"> 
+                                    <img src="icons/arrow_up.svg" class="stepper-img" onclick="incrementCounter('second-counter')">
+                                    <img src="icons/arrow_down.svg" class="stepper-img" onclick="decrementCounter('second-counter')">
+                                </li>                                
+                                <li class="name col-6">Guénilles</li>
+                            </ul>  
+
+                            <ul>
+                                <li class="input-box col-4"><input type="text" value="0" id="third-counter"></li>
+                                <li class="stepper col-2"> 
+                                    <img src="icons/arrow_up.svg" class="stepper-img" onclick="incrementCounter('third-counter')">
+                                    <img src="icons/arrow_down.svg" class="stepper-img" onclick="decrementCounter('third-counter')">
+                                </li>                                
+                                <li class="name col-6">Désodorisant</li>
+                            </ul>  
+
+                            <ul>
+                                <li class="input-box col-4"><input type="text" value="0" id="fourth-counter"></li>
+                                <li class="stepper col-2"> 
+                                    <img src="icons/arrow_up.svg" class="stepper-img" onclick="incrementCounter('fourth-counter')">
+                                    <img src="icons/arrow_down.svg" class="stepper-img" onclick="decrementCounter('fourth-counter')">
+                                </li>                                
+                                <li class="name col-6">Ampoules</li>
+                            </ul>
+                            <br>
+                            <p>Autres :</p>
+                            <div class="other-order">
+                                <textarea class="box-comment"></textarea>
+                                <br>
+                                <button id= "order-button">Commander</button>
+                            </div>
+                         </div>
                     </div>
                 </div>
             </div>
