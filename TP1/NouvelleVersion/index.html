@@ -5,7 +5,6 @@
         <link rel="shortcut icon" href="https://d1h0x9w88ijkiq.cloudfront.net/3717a/images/favicon_play.ico" />
         <title>Accueil_service</title>
         <link rel="stylesheet" href="css/styles.css">
-        <script src="js/script.js"></script>
     </head>
     <body>
         
@@ -31,31 +30,29 @@
                 <div class="content">
                     <div class="col-8">
                         <h2>Nouvelles</h2>
-
                         <ul>
-                            <li>
-                                <h3>Nouvelle 1</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
-                                <div class="modal" id="modal">
-                                    <div class="modal-wrapper">
-                                        <div class="modal-content">
-                                            <div class= "modal-header">
-                                                <h3>Nouvelle 1</h3><button data-close-button type="button" class="close-button">&times;</button></div> 
-                                                <div class="modal-body">
-                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum saepe laborum omnis. Modi consequuntur consequatur aliquam magni voluptate voluptatum commodi pariatur voluptates illum labore dicta perferendis ipsum incidunt, minima ut! Illum impedit dolores 
-                                                    nulla earum aliquid voluptatibus repudiandae maxime hic, libero assumenda, ipsum minus expedita? Commodi dolores cum modi eligendi aut quasi voluptas, repudiandae consectetur voluptate omnis delectus quod eius quia, consequuntur nisi beatae dolorem architecto!
-                                                    Ab labore hic exercitationem error corrupti nostrum magni veritatis nam! Quisquam tempora sit nihil temporibus eveniet sunt dolore vero ipsam quas rem, reiciendis veritatis eligendi unde facilis ut enim atque, porro voluptas magni nisi odit repellat voluptatum!
-                                                    Excepturi modi architecto est laudantium minima blanditiis deserunt porro nostrum. Perferendis reprehenderit ut praesentium ex explicabo doloribus sit fuga illo voluptatem reiciendis similique ducimus temporibus necessitatibus ullam facere fugiat quas delectus, 
-                                                    alias dolorem maiores voluptas.
-                                                </div>
-                                        </div>
-                                    </div>
-                                </div>
-
+                            <li id ="text-clickable"><h3>Nouvelle 1</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
                             <li><h3>Nouvelle 2</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
                             <li><h3>Nouvelle 3</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
                             <li><h3>Nouvelle 4</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
                         </ul>
-                        
+                        <!-- Modal related to news-modal-btn -->
+                        <div class="news-modal-bg">
+                            <div class="news-modal-wrapper">
+                                <div class= "news-modal-header">
+                                    <h3>Nouvelle 1</h3>
+                                    <span class="news-btn-close">&times;</span>
+                                </div> 
+                                <div class="news-modal-body">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum saepe laborum omnis. Modi consequuntur consequatur aliquam magni voluptate voluptatum commodi pariatur voluptates illum labore dicta perferendis ipsum incidunt, minima ut! Illum impedit dolores 
+                                    nulla earum aliquid voluptatibus repudiandae maxime hic, libero assumenda, ipsum minus expedita? Commodi dolores cum modi eligendi aut quasi voluptas, repudiandae consectetur voluptate omnis delectus quod eius quia, consequuntur nisi beatae dolorem architecto!
+                                    Ab labore hic exercitationem error corrupti nostrum magni veritatis nam! Quisquam tempora sit nihil temporibus eveniet sunt dolore vero ipsam quas rem, reiciendis veritatis eligendi unde facilis ut enim atque, porro voluptas magni nisi odit repellat voluptatum!
+                                    Excepturi modi architecto est laudantium minima blanditiis deserunt porro nostrum. Perferendis reprehenderit ut praesentium ex explicabo doloribus sit fuga illo voluptatem reiciendis similique ducimus temporibus necessitatibus ullam facere fugiat quas delectus, 
+                                     alias dolorem maiores voluptas.
+                                </div>
+                            </div>
+                        </div>
+                        <!--end modal-->
                         
                     </div>
                     <div class="col-4 box-border">
@@ -101,7 +98,22 @@
                             <div class="other-order">
                                 <textarea class="box-comment"></textarea>
                                 <br>
-                                <button id= "order-button">Commander</button>
+                                <button class="order-btn">Commander</button>
+                                <!-- Modal related to order-btn -->
+                                <div class="order-modal-bg">
+                                    <div class="order-modal-wrapper">
+                                        <div class="order-modal-header">
+                                            <h3>Confirmation</h3>
+                                            <span class="order-btn-close">&times;</span>
+                                        </div>
+                                        <div class="order-modal-body">
+                                            1 litre de savon 2 guenilles.
+                                            <br><br>
+                                            Vous serez avisé lorsque les items commandés seront à votre disposition au siège de l’association Frigocommunautaire sur au 4525 Rue Clark, Montréal, QC. </p1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end modal-->
                             </div>
                          </div>
                     </div>
@@ -125,7 +137,8 @@
                             <li><h5>Michel Gagnon - Gestionnaire entretien</h5><p>michel.gagnon.967@gmail.com &nbsp;<img src="icons/copy.svg" alt="copy-img"></p></li>
                             <li><h5>Simon Tremblay - Préposé entretien</h5><p>stremblay3450@videotron.ca  &nbsp; <img src="icons/copy.svg" alt="copy-img"></p></li>
                             <li><h5>Robert Roy - Préposé entretien</h5><p>robert.roy345@outlook.com &nbsp; <img src="icons/copy.svg" alt="copy-img"></p></li>
-                            <li><h5>Fanny Côté - Préposé entretien</h5><p>fcote3450@videotron.ca &nbsp; <img title = "popMessageHere" src="icons/copy.svg" alt="copy-img"></p></li>
+                            <li><h5>Fanny Côté - Préposé entretien</h5><p>fcote3450@videotron.ca &nbsp; <img title = "popMessageHere" src="icons/copy.svg" alt="copy-img" class="popup" onclick="myFunction()">
+                                </p></li>
                             <li><h5>Robert Morin - Préposé entretien</h5><p>rrmorin3450@videotron.ca  &nbsp; <img src="icons/copy.svg" alt="copy-img"></p></li>
                         </ul>
                        
@@ -142,5 +155,6 @@
                 </div>
             </div>
         </div>
+        <script src="js/script.js"></script>
     </body>
 </html>

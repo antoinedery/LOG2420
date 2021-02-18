@@ -1,18 +1,46 @@
-const openModal = documents.querySelectorAll();
-const closeModalButton = documents.querySelectorAll('[data-close-button]');
 
-closeModalButton.ForEach(button => {
-    button.addEventLister('click', () => {
-        const modal = button.closest('.modal') 
-        close(modal)
-    })
+/*-------------------------Variables et constantes--------------------*/
+const modalOrderBtn = document.querySelector('.order-btn');
+const modalOrderBg = document.querySelector('.order-modal-bg');
+const modalOrderClose = document.querySelector('.order-btn-close');
+const modalNewsBg = document.querySelector('.news-modal-bg');
+const modalNewsClose = document.querySelector('.news-btn-close');
+
+
+
+
+/*---------------------------News Modal---------------------------------*/
+
+document.getElementById("text-clickable").onclick = function() {openModal()};
+
+function openModal() {
+  document.getElementById("text-clickable").innerHTML = modalNewsBg.classList.add('news-modal-bg-active');
+};
+
+modalNewsClose.addEventListener('click', function(){
+    modalNewsBg.classList.remove('news-modal-bg-active');
 })
 
-function closeModal(modal){
-    if(modal == nul) return 
-    modal.remove('active')
+
+
+/*--------------------------Order modal-------------------------------*/
+/*Pour ouvrir le modal order en appuyant sur le bouton commander*/
+modalOrderBtn.addEventListener('click', function(){
+    modalOrderBg.classList.add('order-modal-bg-active');
+})
+
+/*Pour fermer le modal order en appuyant sur l'icon X*/
+modalOrderClose.addEventListener('click', function(){
+    modalOrderBg.classList.remove('order-modal-bg-active');
+})
+
+
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
 }
 
+/*--------------------------Order counter list-------------------------*/
 /*Pour incrémenter le compteur dans la section Commande du matériel*/
 function incrementCounter(id)
 {

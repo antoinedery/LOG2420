@@ -3,8 +3,8 @@
 }
 
 body{
-    margin: 0;
     color: black;
+    margin: 0;
     font-family: "Arial", sans-serif;
 }
 
@@ -16,6 +16,7 @@ p {
     text-align: justify;
     font-size: 14px;
 }
+
 
 ul
 {
@@ -73,9 +74,9 @@ li
 
 .box-border
 {
+    border-color: rgb(133, 133, 133);
     border-style: solid;
     border-width: 1px;
-    border-color: rgb(133, 133, 133);
     text-align: center;
     
     display:flex;
@@ -103,10 +104,10 @@ li
 
 .order input
 {
+    color: #8C8C8C;
     padding:10px;
     width: 90%;
     text-align:left;
-    color: #8C8C8C;
     font-size: 18px;
     border-radius: 5px;
     border-color: transparent;
@@ -126,6 +127,61 @@ li
     cursor: pointer;
 }
 
+/*------------------------------Nouvelle1 modal------------------------------*/
+.news-modal-bg{
+    background: rgba(0, 0, 0, 0.4);
+    display:flex;
+    justify-content: center;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.news-modal-bg-active{
+    visibility:visible;
+    opacity:1;
+}
+
+.news-modal-wrapper{
+    background-color: rgb(228, 228, 228);
+    position: relative;
+    height: 295px;
+    border-style: solid;
+    border-width: 1px;
+    width: 582px;
+    height: 295px;
+    max-width:100%;
+}
+
+.news-modal-header {
+    display:flex;  
+    justify-content: space-between;
+    margin: 20px 0 0 17px;
+
+}
+
+.news-modal-body{
+    display:flex;   
+    margin: 5px 10px 0 17px;
+    font-size: 12.8px;
+}
+
+.news-btn-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 21px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*------------------------------Order section------------------------------*/
+/*-------------------------------------------------------------------------*/
 .order p
 {
     font-size:18px;
@@ -143,8 +199,8 @@ li
     font-size: inherit;
     font-family: inherit;
 }
-  
-#order-button {
+
+.order-btn{
     background-color: rgb(0, 140, 140);
     border-radius: 5px;
     border: none;
@@ -155,7 +211,6 @@ li
     font-size: 19px;
     margin: 4px 2px;
 }
-
 
 .bottom-container{
     background-color: rgb(239, 239, 239);
@@ -169,26 +224,29 @@ li
     width: 1080px; /*Revoir*/
 }
 
-.modal{
-    background: rgba(0, 0, 0, 0.4);
-    display:flex;
-    justify-content: center;
+/*------------------------------Order modal------------------------------*/
+.order-modal-bg{
+    background-color: rgba(0,0,0,0.4);
     position:fixed;
+    left:0;
+    top:0;
     width:100%;
     height:100%;
-    top:0;
-    left:0;
+    display:flex;
+    justify-content: center;
     align-items: center;
-    /*N'affiche pas le modal pop up*/
-    transform:scale(0);
+    visibility: hidden;
+    opacity:0;
 }
 
-/*Affiche le modal pop up en ajoutant active class = "modal active" a la ligne 38 de index.html*/
-.modal.active{
-    transform: scale(1);
+.order-modal-bg-active{
+    visibility:visible;
+    opacity:1;
 }
-.modal-wrapper{
+
+.order-modal-wrapper{
     background-color: rgb(228, 228, 228);
+    position: relative;
     height: 295px;
     border-style: solid;
     border-width: 1px;
@@ -197,27 +255,29 @@ li
     max-width:100%;
 }
 
-.modal-header {
+.order-modal-header{
     display:flex;  
-    justify-content: space-between;
     margin: 20px 0 0 17px;
-
+    font-size: 0.92rem;
 }
 
-.modal-header .close-button{
-    cursor:pointer;
-    font-size: 1.5rem; 
-    border: none;
-    background: none;
-    outline: none;
-    margin-right: 2%;
+.order-modal-body{
+    margin: 90px 17px 0 17px;
+    text-align: left;
+    font-size: 13px;
 }
 
-.modal-body{
-    display:flex;   
-    margin: 5px 10px 0 17px;
-    font-size: 12.8px;
+.order-btn-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 21px;
+    font-weight: bold;
+    cursor: pointer;
 }
+
+/*----------------------------------------------------------------------------*/
+/*------------------------------End Order section-----------------------------*/
 
 a:link, a:visited, a:hover {
     color: inherit;
@@ -234,7 +294,41 @@ a:link, a:visited, a:hover {
     height: 45px;
 }
 
+/*------------------------------Bottin section--------------------------------*/
+/*----------------------------------------------------------------------------*/
 
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+/*----------------------------------------------------------------------------*/
+/*------------------------------End Bottin section----------------------------*/
 
 /*Other elements*/
 [class*="col-"]{
