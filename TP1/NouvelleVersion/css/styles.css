@@ -129,7 +129,7 @@ li
 
 /*------------------------------Nouvelle1 modal------------------------------*/
 .news-modal-bg{
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.3);
     display:flex;
     justify-content: center;
     position:fixed;
@@ -274,6 +274,11 @@ li
     font-size: 21px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.order-modal-bg-active{
+    visibility:visible;
+    opacity:1;
 }
 
 /*----------------------------------------------------------------------------*/
