@@ -96,3 +96,24 @@ function returnCounter()
     document.getElementById("autres").innerHTML = "Autres : " + value;
 
 }
+
+/*pop up shit*/
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+  popup.classList.toggle("noshow");
+
+}
+
+
+/*Copy to clipboard function*/
+function copyToClipboard(id)
+{
+  var copyText = document.getElementById(id);
+  var textArea = document.createElement("textarea");
+  textArea.value = copyText.textContent;
+  document.body.appendChild(textArea);
+  textArea.select();
+  document.execCommand("Copy");
+  textArea.remove();
+}

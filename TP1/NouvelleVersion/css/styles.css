@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6, p{
     margin: 0;
 }
 
-p {
+p, span {
     text-align: justify;
     font-size: 14px;
 }
@@ -84,7 +84,7 @@ li
     left:0;
     align-items: center;
     visibility: hidden;
-    opacity:0;
+    opacity: 0;
 }
 
 .public-modal-wrapper{
@@ -273,6 +273,7 @@ input::-webkit-inner-spin-button {
     text-align: center;
     font-size: 19px;
     margin: 4px 2px;
+    cursor:pointer;
 }
 
 .bottom-container{
@@ -438,7 +439,7 @@ a:link, a:visited, a:hover {
 
 .nettoyage-modal-body{
     display:flex;   
-    margin: 30px 10px 0 17px;
+    margin: 70px 10px 0 17px;
     font-size: 12.8px;
 }
 
@@ -448,6 +449,11 @@ a:link, a:visited, a:hover {
     right: 10px;
     font-size: 21px;
     font-weight: bold;
+    cursor: pointer;
+}
+
+#title-clickable
+{
     cursor: pointer;
 }
 /*---------------------------End Nettoyage modal------------------------*/
@@ -512,6 +518,74 @@ a:link, a:visited, a:hover {
         max-width: 1000px;
     }
 }
+
+/*Nhat-an's shit*/
+
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #fff;
+    color: #555;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+    border: 1px solid #555;
+  }
+
+  /* Toggle this class - hide and show the popup*/
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;} 
+  }
+  
+  .popup .noshow {
+    visibility: visible;
+    -webkit-animation: fadeOut 1s;
+    animation: fadeOut 1s;
+  }
+
+  /* weird shit*/
+  @-webkit-keyframes fadeOut {
+    from {opacity: 1;} 
+    to {opacity: 0;}
+  }
+  
+  @keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity:0 ;}
+  }
+
+
 
 
 

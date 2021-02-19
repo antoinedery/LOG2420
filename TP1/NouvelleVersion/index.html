@@ -26,17 +26,18 @@
         </div>
 
         <!-- Modal1 -->
+        <!-- Must to keep it because it's different from others modal -->
         <div class="public-modal-bg">
             <div class="public-modal-wrapper">
                 <div class= "public-modal-header">
-                    <h2>Quitter l'espace membre</h2>
+                    Quitter l'espace membre
                 </div> 
                 <div class="public-modal-body">
                     Voulez-vous quitter l'espace membre? Tant que vous serez contecté, vous pouvez revenir librement.
                 </div>
                 <div class="public-modal-footer">
-                    <button class="annuler-btn">Annuler</button>
-                    <button class="ok-btn">Ok</button>
+                    <button class="annuler-btn" onclick="myFunction()">Annuler</button>
+                    <button class="ok-btn" onclick="myFunction()">Ok</button>
                 </div>
             </div>
         </div>
@@ -54,6 +55,7 @@
                             <li><h3>Nouvelle 4</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
                         </ul>
                         <!-- Modal2 -->
+                          <!-- Must to keep it because it's different from others modal -->
                         <div class="news-modal-bg">
                             <div class="news-modal-wrapper">
                                 <div class= "news-modal-header">
@@ -114,8 +116,9 @@
                             <p>Autres :</p>
                             <textarea id="box-comment"></textarea>
                             <br>
-                            <button class="order-btn" style="cursor:pointer" onclick="returnCounter()">Commander</button>
+                            <button class="order-btn" onclick="returnCounter()">Commander</button>
                             <!-- Modal3-->
+                            <!-- Must to keep it because it's different from others modal -->
                             <div class="order-modal-bg">
                                 <div class="order-modal-wrapper">
                                     <div class="order-modal-header">
@@ -144,12 +147,13 @@
                     <div class="col-4">
                         <h2>Guides d'entretien</h2> 
                         <ul>
-                            <li id ="title-clickable"  style="cursor:pointer" onclick="Myfunction()"><h4>Nettoyage et vérifications générales</h4></li>
+                            <li id ="title-clickable" onclick="Myfunction()"><h4>Nettoyage et vérifications générales</h4></li>
                             <li><h4>Nettoyage des serpentins  du condenseur</h4></li>
                             <li><h4>Dégivrage</h4></li>
                             <li><h4>Vérification du système de drainage</h4></li>
                         </ul>
                         <!-- Modal4 -->
+                        <!-- Must to remove it -->
                         <div class="nettoyage-modal-bg">
                             <div class="nettoyage-modal-wrapper">
                                 <div class= "news-modal-header">
@@ -171,11 +175,18 @@
                     <div class="col-4">
                         <h2>Bottin</h2> 
                        <ul>
-                            <li><h5>Michel Gagnon - Gestionnaire entretien</h5><p>michel.gagnon.967@gmail.com &nbsp;<img src="icons/copy.svg" alt="copy-img"></p></li>
-                            <li><h5>Simon Tremblay - Préposé entretien</h5><p>stremblay3450@videotron.ca  &nbsp; <img src="icons/copy.svg" alt="copy-img"></p></li>
-                            <li><h5>Robert Roy - Préposé entretien</h5><p>robert.roy345@outlook.com &nbsp; <img src="icons/copy.svg" alt="copy-img"></p></li>
-                            <li><h5>Fanny Côté - Préposé entretien</h5><p>fcote3450@videotron.ca &nbsp; <img title = "popMessageHere" src="icons/copy.svg" alt="copy-img" class="popup" onclick="myFunction()">
-                                </p></li>
+                            <li><h5>Michel Gagnon - Gestionnaire entretien</h5><span id="michel">michel.gagnon.967@gmail.com</span>&nbsp;<img src="icons/copy.svg" alt="copy-img" onclick="copyToClipboard('michel')"></li>
+                            <li><h5>Simon Tremblay - Préposé entretien</h5><span>stremblay3450@videotron.ca</span>  &nbsp; <img src="icons/copy.svg" alt="copy-img"></li>
+                            <li><h5>Robert Roy - Préposé entretien</h5><span>robert.roy345@outlook.com</span> &nbsp; <img src="icons/copy.svg" alt="copy-img"></li>
+                            
+                            <li>
+                                <h5>Fanny Côté - Préposé entretien</h5>
+                                <span>fcote3450@videotron.ca</span> &nbsp;
+                                    <div class="popup" onclick="myFunction()"><img src="icons/copy.svg" alt="copy-img">
+                                        <span class="popuptext" id="myPopup">Adresse copiée</span>
+                                    </div>
+                            </li>
+
                             <li><h5>Robert Morin - Préposé entretien</h5><p>rrmorin3450@videotron.ca  &nbsp; <img src="icons/copy.svg" alt="copy-img"></p></li>
                         </ul>
                        
