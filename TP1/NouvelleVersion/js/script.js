@@ -7,6 +7,8 @@ const modalOrderClose = document.querySelector('.order-btn-close');
 const modalNewsBg = document.querySelector('.news-modal-bg');
 const modalNewsClose = document.querySelector('.news-btn-close');
 
+const modalCleaningBg = document.querySelector('.nettoyage-modal-bg');
+const modalCleaningClose = document.querySelector('.nettoyage-btn-close');
 
 
 
@@ -29,6 +31,15 @@ modalOrderBtn.addEventListener('click', function(){
 /*Pour fermer le modal order en appuyant sur l'icon X*/
 modalOrderClose.addEventListener('click', function(){
     modalOrderBg.classList.remove('order-modal-bg-active');
+})
+
+/*---------------------------Cleaning Modal---------------------------------*/
+document.getElementById("title-clickable").onclick = function(){
+  modalCleaningBg.classList.add('nettoyage-modal-bg-active');
+}
+
+modalCleaningClose.addEventListener('click', function(){
+    modalCleaningBg.classList.remove('nettoyage-modal-bg-active');
 })
 
 

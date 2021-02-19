@@ -25,18 +25,35 @@
                 </div>
         </div>
 
+        <!-- Modal1 -->
+        <div class="public-modal-bg">
+            <div class="public-modal-wrapper">
+                <div class= "public-modal-header">
+                    <h2>Quitter l'espace membre</h2>
+                </div> 
+                <div class="public-modal-body">
+                    Voulez-vous quitter l'espace membre? Tant que vous serez contecté, vous pouvez revenir librement.
+                </div>
+                <div class="public-modal-footer">
+                    <button class="annuler-btn">Annuler</button>
+                    <button class="ok-btn">Ok</button>
+                </div>
+            </div>
+        </div>
+        <!--end Modal1-->
+        
         <div class="main-window">
             <div class="middle-container">
                 <div class="content">
                     <div class="col-8">
                         <h2>Nouvelles</h2>
                         <ul>
-                            <li id ="text-clickable" onclick="Myfunction()"><h3>Nouvelle 1</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
+                            <li id ="text-clickable" style="cursor:pointer" onclick="Myfunction()"><h3>Nouvelle 1</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
                             <li><h3>Nouvelle 2</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
                             <li><h3>Nouvelle 3</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
                             <li><h3>Nouvelle 4</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></li>
                         </ul>
-                        <!-- Modal related to news-modal-btn -->
+                        <!-- Modal2 -->
                         <div class="news-modal-bg">
                             <div class="news-modal-wrapper">
                                 <div class= "news-modal-header">
@@ -52,7 +69,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!--end modal-->
+                        <!--end Modal2-->
                         
                     </div>
                     <div class="col-4 box-border">
@@ -97,8 +114,8 @@
                             <p>Autres :</p>
                             <textarea id="box-comment"></textarea>
                             <br>
-                            <button class="order-btn" onclick="returnCounter()">Commander</button>
-                            <!-- Modal related to order-btn -->
+                            <button class="order-btn" style="cursor:pointer" onclick="returnCounter()">Commander</button>
+                            <!-- Modal3-->
                             <div class="order-modal-bg">
                                 <div class="order-modal-wrapper">
                                     <div class="order-modal-header">
@@ -116,7 +133,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--end modal-->
+                            <!--end Modal3-->
                         </div>
                     </div>
                 </div>
@@ -127,11 +144,29 @@
                     <div class="col-4">
                         <h2>Guides d'entretien</h2> 
                         <ul>
-                            <li><h4>Nettoyage et vérifications générales</h4></li>
+                            <li id ="title-clickable"  style="cursor:pointer" onclick="Myfunction()"><h4>Nettoyage et vérifications générales</h4></li>
                             <li><h4>Nettoyage des serpentins  du condenseur</h4></li>
                             <li><h4>Dégivrage</h4></li>
                             <li><h4>Vérification du système de drainage</h4></li>
                         </ul>
+                        <!-- Modal4 -->
+                        <div class="nettoyage-modal-bg">
+                            <div class="nettoyage-modal-wrapper">
+                                <div class= "news-modal-header">
+                                    <h3>Nettoyage et vérifications générales</h3>
+                                    <span class="nettoyage-btn-close">&times;</span>
+                                    </div> 
+                                    <div class="nettoyage-modal-body">
+                                        Les portes d’un réfrigérateur se ferment hermétiquement grâce aux joints en caoutchouc (généralement blancs) situées tout autour des portes. Une saleté excessive pourrait
+                                        empêche les joints de bien isoler l’espace entre le cabinet et la porte de réfrigérateur, ce qui causera une fuite d’air. Cette fuite fera augmenter la température et donc 
+                                        surchauffer le compresseur. Une autre conséquence est que la saleté pourrait causer l’adhérence du joint, qui, s’il reste collé, pourrait déchirer lors de l’ouverture de la 
+                                        porte. Pour éviter tous ces tracas, prenez 5 minutes une fois par mois pour les nettoyer à l’aide d’un linge humide pour éliminer les saletés. Changer un joint de porte peut 
+                                        coûter plus de 150$! Des frais facilement évitables Réf" https://service2000.ca/eviter-reparations-de-refrigerateur/
+                                    </div>
+                                </div>
+                            </div>
+                        <!--end Modal4-->
+                        
                     </div>
                     <div class="col-4">
                         <h2>Bottin</h2> 
