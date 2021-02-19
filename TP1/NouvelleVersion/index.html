@@ -95,28 +95,29 @@
                             </ul>
                             
                             <p>Autres :</p>
-                            <div class="other-order">
-                                <textarea class="box-comment"></textarea>
-                                <br>
-                                <button class="order-btn">Commander</button>
-                                <!-- Modal related to order-btn -->
-                                <div class="order-modal-bg">
-                                    <div class="order-modal-wrapper">
-                                        <div class="order-modal-header">
-                                            <h3>Confirmation</h3>
-                                            <span class="order-btn-close">&times;</span>
-                                        </div>
-                                        <div class="order-modal-body">
-
-                                            1 litre de savon 2 guenilles.
-                                            <br><br>
-                                            Vous serez avisé lorsque les items commandés seront à votre disposition au siège de l’association Frigocommunautaire sur au 4525 Rue Clark, Montréal, QC. </p1>
-                                        </div>
+                            <textarea id="box-comment"></textarea>
+                            <br>
+                            <button class="order-btn" onclick="returnCounter()">Commander</button>
+                            <!-- Modal related to order-btn -->
+                            <div class="order-modal-bg">
+                                <div class="order-modal-wrapper">
+                                    <div class="order-modal-header">
+                                        <h3>Confirmation</h3>
+                                        <span class="order-btn-close">&times;</span>
+                                    </div>
+                                    <div class="order-modal-body">
+                                        <p id="savon"></p>
+                                        <p id="guenille"></p>
+                                        <p id="desodorisant"></p>
+                                        <p id="ampoules"></p>
+                                        <p id="autres"></p>
+                                        <br>
+                                        Vous serez avisé lorsque les items commandés seront à votre disposition au siège de l’association Frigocommunautaire sur au 4525 Rue Clark, Montréal, QC. </p1>
                                     </div>
                                 </div>
-                                <!--end modal-->
                             </div>
-                         </div>
+                            <!--end modal-->
+                        </div>
                     </div>
                 </div>
             </div>

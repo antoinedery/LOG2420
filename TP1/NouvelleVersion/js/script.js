@@ -33,23 +33,55 @@ modalOrderClose.addEventListener('click', function(){
 
 
 /*--------------------------Order counter list-------------------------*/
-/*Pour incrémenter le compteur dans la section Commande du matériel*/
+/*Incrémenter le compteur dans la section Commande du matériel*/
 function incrementCounter(id)
 {
-  let value = parseInt(document.getElementById(id).value);
-  value = isNaN(value) ? 0 : value;
-  value++;
-  document.getElementById(id).value = value;
+  let value = document.getElementById(id).value;
+    if (value >= 0) //Evite d'afficher des valeurs négatives
+      document.getElementById(id).value = ++value;
+    else 
+      document.getElementById(id).value = 0;
+
 }
 
-/*Pour décrémenter le compteur dans la section Commande du matériel*/
+/*Décrémenter le compteur dans la section Commande du matériel*/
 function decrementCounter(id)
 {
-  let value = parseInt(document.getElementById(id).value);
-  value = isNaN(value) ? 0 : value;
-  if (value != 0) //Evite d'afficher des valeurs négatives
-  {
-  	value--;
-  }
-  document.getElementById(id).value = value;
+  let value = document.getElementById(id).value;
+  if (value > 0) //Evite d'afficher des valeurs négatives
+  	document.getElementById(id).value = --value;
+  else 
+    document.getElementById(id).value = 0;
+  
+}
+
+/*Afficher la valeur de chaque compteur et afficher dans la modale*/
+function returnCounter()
+{
+  document.getElementById("savon").innerHTML = "";
+  document.getElementById("guenille").innerHTML = "";
+  document.getElementById("desodorisant").innerHTML = "";
+  document.getElementById("ampoules").innerHTML = "";
+  document.getElementById("autres").innerHTML = "";
+
+  let value = document.getElementById('first-counter').value;
+  if (value != 0)
+    document.getElementById("savon").innerHTML = value + " litre(s) de savon";
+
+  value = document.getElementById('second-counter').value;
+  if (value != 0)  
+    document.getElementById("guenille").innerHTML = value + " guénille(s)";
+
+  value = document.getElementById('third-counter').value;
+  if (value != 0)  
+    document.getElementById("desodorisant").innerHTML = value  + " désodorisant(s)";
+
+  value = document.getElementById('fourth-counter').value;
+  if (value != 0)  
+    document.getElementById("ampoules").innerHTML = value  + " ampoule(s)";
+
+  value = document.getElementById('box-comment').value;
+  if (value != 0) 
+    document.getElementById("autres").innerHTML = "Autres : " + value;
+
 }
