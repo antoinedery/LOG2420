@@ -33,7 +33,7 @@
                     Quitter l'espace membre
                 </div> 
                 <div class="public-modal-body">
-                    Voulez-vous quitter l'espace membre? Tant que vous serez contecté, vous pouvez revenir librement.
+                    Voulez-vous quitter l'espace membre? Tant que vous serez connecté, vous pouvez revenir librement.
                 </div>
                 <div class="public-modal-footer">
                     <button class="annuler-btn" onclick="myFunction()">Annuler</button>
@@ -76,7 +76,7 @@
                     </div>
                     <div class="col-4 box-border">
                         <h2>Commande du matériel</h2> 
-                        <div class="order">
+                        <form class="order">
                             <ul>
                                 <li class="col-4"><input type="text" value="0" id="first-counter"></li>
                                 <li class="stepper col-2"> 
@@ -116,7 +116,8 @@
                             <p>Autres :</p>
                             <textarea id="box-comment"></textarea>
                             <br>
-                            <button class="order-btn" onclick="returnCounter()">Commander</button>
+                            <button class="order-btn" onclick="confirmOrder(event)">Commander</button>
+                        </form>
                             <!-- Modal3-->
                             <!-- Must to keep it because it's different from others modal -->
                             <div class="order-modal-bg">
@@ -137,7 +138,6 @@
                                 </div>
                             </div>
                             <!--end Modal3-->
-                        </div>
                     </div>
                 </div>
             </div>
@@ -175,19 +175,37 @@
                     <div class="col-4">
                         <h2>Bottin</h2> 
                        <ul>
-                            <li><h5>Michel Gagnon - Gestionnaire entretien</h5><span id="michel">michel.gagnon.967@gmail.com</span>&nbsp;<img src="icons/copy.svg" alt="copy-img" onclick="copyToClipboard('michel')"></li>
-                            <li><h5>Simon Tremblay - Préposé entretien</h5><span>stremblay3450@videotron.ca</span>  &nbsp; <img src="icons/copy.svg" alt="copy-img"></li>
-                            <li><h5>Robert Roy - Préposé entretien</h5><span>robert.roy345@outlook.com</span> &nbsp; <img src="icons/copy.svg" alt="copy-img"></li>
+                            <li>
+                                <h5>Michel Gagnon - Gestionnaire entretien</h5>
+                                <span id="michel">michel.gagnon.967@gmail.com</span>
+                                <img src="icons/copy.svg" alt="copy-img" class="copyImage" onclick="copyToClipboard('michel')">
+                            </li>
+
+                            <li>
+                                <h5>Simon Tremblay - Préposé entretien</h5>
+                                <span id="simon">stremblay3450@videotron.ca</span>
+                                <img src="icons/copy.svg" alt="copy-img" class="copyImage" onclick="copyToClipboard('simon')">
+                            </li>
+
+                            <li>
+                                <h5>Robert Roy - Préposé entretien</h5>
+                                <span id="robert">robert.roy345@outlook.com</span>
+                                <img src="icons/copy.svg" alt="copy-img" class="copyImage" onclick="copyToClipboard('robert')">
+                            </li>
                             
                             <li>
                                 <h5>Fanny Côté - Préposé entretien</h5>
-                                <span>fcote3450@videotron.ca</span> &nbsp;
-                                    <div class="popup" onclick="myFunction()"><img src="icons/copy.svg" alt="copy-img">
-                                        <span class="popuptext" id="myPopup">Adresse copiée</span>
+                                <span id="fanny">fcote3450@videotron.ca</span>
+                                    <div class="popup" onclick="myFunction('fanny')"><img src="icons/copy.svg" alt="copy-img" class="copyImage">
+                                        <span class="popuptext" id=myPopup>Adresse copiée</span>
                                     </div>
                             </li>
 
-                            <li><h5>Robert Morin - Préposé entretien</h5><p>rrmorin3450@videotron.ca  &nbsp; <img src="icons/copy.svg" alt="copy-img"></p></li>
+                            <li>
+                                <h5>Robert Morin - Préposé entretien</h5>
+                                <span id="robert2">robert.roy345@outlook.com</span>
+                                <img src="icons/copy.svg" alt="copy-img" class="copyImage" onclick="copyToClipboard('robert2')">
+                            </li>
                         </ul>
                        
                     </div>

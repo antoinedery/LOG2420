@@ -13,104 +13,114 @@ const modalCleaningClose = document.querySelector('.nettoyage-btn-close');
 
 
 /*---------------------------News Modal---------------------------------*/
-document.getElementById("text-clickable").onclick = function(){
+document.getElementById("text-clickable").onclick = function () {
   modalNewsBg.classList.add('news-modal-bg-active');
 }
 
-modalNewsClose.addEventListener('click', function(){
-    modalNewsBg.classList.remove('news-modal-bg-active');
+modalNewsClose.addEventListener('click', function () {
+  modalNewsBg.classList.remove('news-modal-bg-active');
 })
 
 
 /*--------------------------Order modal-------------------------------*/
 /*Pour ouvrir le modal order en appuyant sur le bouton commander*/
-modalOrderBtn.addEventListener('click', function(){
-    modalOrderBg.classList.add('order-modal-bg-active');
+modalOrderBtn.addEventListener('click', function () {
+  modalOrderBg.classList.add('order-modal-bg-active');
 })
 
 /*Pour fermer le modal order en appuyant sur l'icon X*/
-modalOrderClose.addEventListener('click', function(){
-    modalOrderBg.classList.remove('order-modal-bg-active');
+modalOrderClose.addEventListener('click', function () {
+  modalOrderBg.classList.remove('order-modal-bg-active');
 })
 
 /*---------------------------Cleaning Modal---------------------------------*/
-document.getElementById("title-clickable").onclick = function(){
+document.getElementById("title-clickable").onclick = function () {
   modalCleaningBg.classList.add('nettoyage-modal-bg-active');
 }
 
-modalCleaningClose.addEventListener('click', function(){
-    modalCleaningBg.classList.remove('nettoyage-modal-bg-active');
+modalCleaningClose.addEventListener('click', function () {
+  modalCleaningBg.classList.remove('nettoyage-modal-bg-active');
 })
 
 
 /*--------------------------Order counter list-------------------------*/
 /*Incrémenter le compteur dans la section Commande du matériel*/
-function incrementCounter(id)
-{
+function incrementCounter(id) {
   let value = document.getElementById(id).value;
-    if (value >= 0) //Evite d'afficher des valeurs négatives
-      document.getElementById(id).value = ++value;
-    else 
-      document.getElementById(id).value = 0;
+  if (value >= 0) //Evite d'afficher des valeurs négatives
+    document.getElementById(id).value = ++value;
+  else
+    document.getElementById(id).value = 0;
 
 }
 
 /*Décrémenter le compteur dans la section Commande du matériel*/
-function decrementCounter(id)
-{
+function decrementCounter(id) {
   let value = document.getElementById(id).value;
   if (value > 0) //Evite d'afficher des valeurs négatives
-  	document.getElementById(id).value = --value;
-  else 
+    document.getElementById(id).value = --value;
+  else
     document.getElementById(id).value = 0;
-  
+}
+
+/*Sauvegarder les données de la commande dans un JSON*/
+function confirmOrder(event) {
+  let items = [];                                         //Clear array on every new order
+  event.preventDefault();                                 //Prevent the page from reloading on form submission
+
+  let item = {
+    savon: document.getElementById('first-counter').value,
+    guenilles: document.getElementById('second-counter').value,
+    desodorisant: document.getElementById('third-counter').value,
+    ampoules: document.getElementById('fourth-counter').value,
+    autres: document.getElementById('box-comment').value
+  }
+  items.push(item);                                       //Store item into array
+  document.forms[0].reset();                              //Reset input box values to 0
+  sessionStorage.setItem('Order', JSON.stringify(items)); //Save to session storage
+
+  displayOrder();                                         //Call displayOrder() to show order confirmation on modal box
 }
 
 /*Afficher la valeur de chaque compteur et afficher dans la modale*/
-function returnCounter()
-{
+function displayOrder() {
   document.getElementById("savon").innerHTML = "";
   document.getElementById("guenille").innerHTML = "";
   document.getElementById("desodorisant").innerHTML = "";
   document.getElementById("ampoules").innerHTML = "";
   document.getElementById("autres").innerHTML = "";
 
-  let value = document.getElementById('first-counter').value;
-  if (value != 0)
-    document.getElementById("savon").innerHTML = value + " litre(s) de savon";
+  let object = JSON.parse(sessionStorage.getItem("Order"));
+  let order = object[0];
 
-  value = document.getElementById('second-counter').value;
-  if (value != 0)  
-    document.getElementById("guenille").innerHTML = value + " guénille(s)";
+  if (order.savon != 0)
+    document.getElementById("savon").innerHTML = order.savon + " litre(s) de savon";
 
-  value = document.getElementById('third-counter').value;
-  if (value != 0)  
-    document.getElementById("desodorisant").innerHTML = value  + " désodorisant(s)";
+  if (order.guenilles != 0)
+    document.getElementById("guenille").innerHTML = order.guenilles + " guénille(s)";
 
-  value = document.getElementById('fourth-counter').value;
-  if (value != 0)  
-    document.getElementById("ampoules").innerHTML = value  + " ampoule(s)";
+  if (order.desodorisant != 0)
+    document.getElementById("desodorisant").innerHTML = order.desodorisant + " désodorisant(s)";
 
-  value = document.getElementById('box-comment').value;
-  if (value != 0) 
-    document.getElementById("autres").innerHTML = "Autres : " + value;
+  if (order.ampoules != 0)
+    document.getElementById("ampoules").innerHTML = order.ampoules + " ampoule(s)";
 
+  if (order.autres != 0)
+    document.getElementById("autres").innerHTML = "Autres : " + order.autres;
 }
 
 /*pop up shit*/
-function myFunction() {
+function myFunction(id) {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
-  popup.classList.toggle("noshow");
-
+  setTimeout(function () { popup.classList.toggle("noshow");}, 1000);
+  copyToClipboard(id);
 }
 
-
 /*Copy to clipboard function*/
-function copyToClipboard(id)
-{
-  var copyText = document.getElementById(id);
-  var textArea = document.createElement("textarea");
+function copyToClipboard(id) {
+  let copyText = document.getElementById(id);
+  let textArea = document.createElement("textarea");
   textArea.value = copyText.textContent;
   document.body.appendChild(textArea);
   textArea.select();
