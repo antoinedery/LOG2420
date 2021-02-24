@@ -77,7 +77,8 @@ function confirmOrder(event) {
   }
   items.push(item);                                       //Store item into array
   document.forms[0].reset();                              //Reset input box values to 0
-  sessionStorage.setItem('Order', JSON.stringify(items)); //Save to session storage
+
+  sessionStorage.setItem("Order", JSON.stringify(items)); //Save to session storage
 
   displayOrder();                                         //Call displayOrder() to show order confirmation on modal box
 }
@@ -109,21 +110,25 @@ function displayOrder() {
     document.getElementById("autres").innerHTML = "Autres : " + order.autres;
 }
 
-/*pop up shit*/
-function myFunction(id) {
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
-  setTimeout(function () { popup.classList.toggle("noshow");}, 1000);
-  copyToClipboard(id);
+
+/*Copier l'adresse courriel et afficher popup*/
+function CopyToClipboard(value) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val(value).select();
+  document.execCommand("copy");
+  $temp.remove();
+
+  var notificationTag = $("div.copy-notification");
+  notificationTag = $("<div/>", { "class": "copy-notification", text: "Adresse copiée" });
+  $("#test2").append(notificationTag);
+
+  notificationTag.fadeIn("slow", function () {
+    setTimeout(function () {
+      notificationTag.fadeOut("slow", function () {
+        notificationTag.remove();
+      });
+    }, 1000);
+  });
 }
 
-/*Copy to clipboard function*/
-function copyToClipboard(id) {
-  let copyText = document.getElementById(id);
-  let textArea = document.createElement("textarea");
-  textArea.value = copyText.textContent;
-  document.body.appendChild(textArea);
-  textArea.select();
-  document.execCommand("Copy");
-  textArea.remove();
-}

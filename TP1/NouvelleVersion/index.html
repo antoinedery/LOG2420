@@ -5,6 +5,7 @@
         <link rel="shortcut icon" href="https://d1h0x9w88ijkiq.cloudfront.net/3717a/images/favicon_play.ico" />
         <title>Accueil_service</title>
         <link rel="stylesheet" href="css/styles.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     </head>
     <body>
         
@@ -33,7 +34,7 @@
                     Quitter l'espace membre
                 </div> 
                 <div class="public-modal-body">
-                    Voulez-vous quitter l'espace membre? Tant que vous serez connecté, vous pouvez revenir librement.
+                    Voulez-vous quitter l'espace membre? Tant que vous serez connectés, vous pouvez revenir librement.
                 </div>
                 <div class="public-modal-footer">
                     <button class="annuler-btn" onclick="myFunction()">Annuler</button>
@@ -78,7 +79,9 @@
                         <h2>Commande du matériel</h2> 
                         <form class="order">
                             <ul>
+                                <div class="stepper-mobile" onclick="incrementCounter('first-counter')"><span>+</span></div>
                                 <li class="col-4"><input type="text" value="0" id="first-counter"></li>
+                                <div class="stepper-mobile" onclick="decrementCounter('first-counter')"><span>-</span></div>
                                 <li class="stepper col-2"> 
                                     <img src="icons/arrow_up.svg" class="stepper-img" onclick="incrementCounter('first-counter')">
                                     <img src="icons/arrow_down.svg" class="stepper-img" onclick="decrementCounter('first-counter')">
@@ -87,7 +90,9 @@
                             </ul>   
                             
                             <ul>
+                                <div class="stepper-mobile" onclick="incrementCounter('second-counter')"><span>+</span></div>
                                 <li class="col-4"><input type="text" value="0" id="second-counter"></li>
+                                <div class="stepper-mobile" onclick="decrementCounter('second-counter')"><span>-</span></div>
                                 <li class="stepper col-2"> 
                                     <img src="icons/arrow_up.svg" class="stepper-img" onclick="incrementCounter('second-counter')">
                                     <img src="icons/arrow_down.svg" class="stepper-img" onclick="decrementCounter('second-counter')">
@@ -96,7 +101,9 @@
                             </ul>  
 
                             <ul>
+                                <div class="stepper-mobile" onclick="incrementCounter('third-counter')"><span>+</span></div>
                                 <li class="col-4"><input type="text" value="0" id="third-counter"></li>
+                                <div class="stepper-mobile" onclick="decrementCounter('third-counter')"><span>-</span></div>
                                 <li class="stepper col-2"> 
                                     <img src="icons/arrow_up.svg" class="stepper-img" onclick="incrementCounter('third-counter')">
                                     <img src="icons/arrow_down.svg" class="stepper-img" onclick="decrementCounter('third-counter')">
@@ -105,11 +112,13 @@
                             </ul>  
 
                             <ul>
+                                <div class="stepper-mobile" onclick="incrementCounter('fourth-counter')"><span>+</span></div>
                                 <li class="col-4"><input type="text" value="0" id="fourth-counter"></li>
+                                <div class="stepper-mobile" onclick="decrementCounter('fourth-counter')"><span>-</span></div>
                                 <li class="stepper col-2"> 
                                     <img src="icons/arrow_up.svg" class="stepper-img" onclick="incrementCounter('fourth-counter')">
                                     <img src="icons/arrow_down.svg" class="stepper-img" onclick="decrementCounter('fourth-counter')">
-                                </li> 
+                                </li>
                                 <li class="name col-6"><p>Ampoules</p></li>                               
                             </ul>
                             
@@ -175,10 +184,10 @@
                     <div class="col-4">
                         <h2>Bottin</h2> 
                        <ul>
-                            <li>
+                            <li id="test2">
                                 <h5>Michel Gagnon - Gestionnaire entretien</h5>
                                 <span id="michel">michel.gagnon.967@gmail.com</span>
-                                <img src="icons/copy.svg" alt="copy-img" class="copyImage" onclick="copyToClipboard('michel')">
+                                <img src="icons/copy.svg" alt="copy-img" class="copyImage" onclick="CopyToClipboard('michel.gagnon.967@gmail.com')">
                             </li>
 
                             <li>
@@ -187,10 +196,10 @@
                                 <img src="icons/copy.svg" alt="copy-img" class="copyImage" onclick="copyToClipboard('simon')">
                             </li>
 
-                            <li>
+                            <li id="test">
                                 <h5>Robert Roy - Préposé entretien</h5>
                                 <span id="robert">robert.roy345@outlook.com</span>
-                                <img src="icons/copy.svg" alt="copy-img" class="copyImage" onclick="copyToClipboard('robert')">
+                                <img src="icons/copy.svg" alt="copy-img" class="copyImage" onclick="CopyToClipboard('robert.roy345@outlook.com')">
                             </li>
                             
                             <li>

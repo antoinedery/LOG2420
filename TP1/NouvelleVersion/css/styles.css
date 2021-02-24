@@ -218,7 +218,7 @@ li
 {
     color: #8C8C8C;
     padding:10px;
-    width: 90%;
+    width: 80px;
     text-align:left;
     font-size: 18px;
     border-radius: 5px;
@@ -251,6 +251,11 @@ input::-webkit-inner-spin-button {
     width:100%;     /*Voir comment enlever ça*/
     display:flex;
     align-items: center;
+}
+
+.stepper-mobile
+{
+    display:none;
 }
 
 #box-comment {
@@ -353,6 +358,7 @@ input::-webkit-inner-spin-button {
 .copyImage
 {
     cursor: pointer;
+    display: inline-block;
 }
 
 a:link, a:visited, a:hover {
@@ -516,6 +522,62 @@ a:link, a:visited, a:hover {
     .modal-wraper{
         max-width: 1000px;
     }
+
+    .stepper, .stepper-img
+    {
+        display: none;
+    }
+
+    .stepper-mobile{
+        display:flex;
+        align-items: center;
+        padding:0;
+        width:80px;
+        height: 35px;
+        border-radius:5px;
+        border-style: solid;
+        border-width: 1.5px;
+        border-color: grey;
+    }
+
+    /*bouton +/- pour mobile*/
+    .stepper-mobile span
+    {
+        font-size: 28px;
+        text-align: center;
+        vertical-align: center;
+        width:100%;
+    }
+
+    .order input {
+        width:80%;
+        height: 35px;
+    }
+
+    li.col-4
+    {
+        width:60%;
+    }
+
+    li.stepper.col-2
+    {
+        width:10%
+    }
+
+    .order li {
+        list-style-type: none;
+        padding: 0;
+        margin:0;
+        display:flex;
+        justify-content: center;
+    }
+
+    .order p
+    {
+        font-size:15px;
+    }
+
+
 }
 
 /*Nhat-an's shit*/
@@ -581,6 +643,32 @@ a:link, a:visited, a:hover {
     to {opacity: 0;
         visibility:hidden;}
   }
+
+
+.copy-notification {
+    color: #555;
+    font-size: 13px;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 8px 0;
+    border: 1px solid #555;
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 120px;
+    display: none;
+    text-align:center;
+}
+
+#test
+{
+    position: relative;
+}
+
+#test2
+{
+    position: relative;
+}
 
 
 
