@@ -112,7 +112,7 @@ function displayOrder() {
 
 
 /*Copier l'adresse courriel et afficher popup*/
-function CopyToClipboard(value) {
+function CopyToClipboard(value, iteration) {
   var $temp = $("<input>");
   $("body").append($temp);
   $temp.val(value).select();
@@ -121,7 +121,7 @@ function CopyToClipboard(value) {
 
   var notificationTag = $("div.copy-notification");
   notificationTag = $("<div/>", { "class": "copy-notification", text: "Adresse copiée" });
-  $("#test2").append(notificationTag);
+  $(".list-employees").eq(iteration).append(notificationTag); /*Changer la valeur de 'iteration' pour l'iteration dans le bottin du JSON .. marche slmt si id dans html*/
 
   notificationTag.fadeIn("slow", function () {
     setTimeout(function () {
@@ -131,4 +131,3 @@ function CopyToClipboard(value) {
     }, 1000);
   });
 }
-

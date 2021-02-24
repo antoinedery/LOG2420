@@ -218,7 +218,7 @@ li
 {
     color: #8C8C8C;
     padding:10px;
-    width: 80px;
+    width: 90%;
     text-align:left;
     font-size: 18px;
     border-radius: 5px;
@@ -266,6 +266,11 @@ input::-webkit-inner-spin-button {
     height: 80px;
     font-size: inherit;
     font-family: inherit;
+}
+
+#box-comment::placeholder
+{
+    color:transparent;
 }
 
 .order-btn{
@@ -354,11 +359,39 @@ input::-webkit-inner-spin-button {
 
 /*----------------------------------------------------------------------------*/
 /*------------------------------End Order section-----------------------------*/
+.employee-mobile
+{
+    display:none;
+}
+
+.employee
+{
+    display:inline;
+}
 
 .copyImage
 {
     cursor: pointer;
-    display: inline-block;
+}
+
+.copy-notification {
+    color: #555;
+    font-size: 13px;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 8px 0;
+    border: 1px solid #555;
+    position: absolute;
+    top:0;
+    right:0;
+    width: 120px;
+    display: none;
+    text-align:center;
+}
+
+.copyMail
+{
+    position: relative;
 }
 
 a:link, a:visited, a:hover {
@@ -487,6 +520,45 @@ a:link, a:visited, a:hover {
     .col-5 {width: 50%;}
     .col-3 {width: 50%;}
     .col-2 {width: 25%;}
+
+    .order
+    {
+        width:265px;
+    }
+
+
+    li.col-4
+    {
+        width : 33.33%;
+    }
+
+    .order input{
+        width:85%;
+        display:flex;
+        align-self: flex-end;
+    }
+
+    .list-employees
+    {
+        display:flex;
+    }
+
+    .employee
+    {
+        display: none;
+    }
+
+    .employee-mobile
+    {
+        display:inline;
+        width:100%;
+    }
+
+    .copyImage
+    {
+        width:33px;
+        height: 33px;
+    }
 }
 
 @media only screen and (max-width: 500px){
@@ -495,16 +567,15 @@ a:link, a:visited, a:hover {
     }
     .col-2 {width: 25%;}
 
-    .top-container{
+    /*.top-container{
         position: fixed; 
     }
 
     .main-window{
-
         top: 13vh;
         height: 87vh;
-        overflow: overlay;
-    }
+        overflow:overlay;
+    }*/
 
     .main-window::-webkit-scrollbar {
         width: 6px;
@@ -526,6 +597,11 @@ a:link, a:visited, a:hover {
     .stepper, .stepper-img
     {
         display: none;
+    }
+
+    .order
+    {
+        width:265px;
     }
 
     .stepper-mobile{
@@ -561,7 +637,7 @@ a:link, a:visited, a:hover {
 
     li.stepper.col-2
     {
-        width:10%
+        width:10%;
     }
 
     .order li {
@@ -577,97 +653,25 @@ a:link, a:visited, a:hover {
         font-size:15px;
     }
 
+    #other-textarea
+    {
+        display:none;
+    }
 
-}
+    #box-comment {
+        width: 100%;
+        height: 40px;
+        padding: 10px 5px;
+        color:black;
+        /*resize: none;
+        white-space: nowrap;*/
+    }
 
-/*Nhat-an's shit*/
+    #box-comment::placeholder
+    {
+        display:contents;
+    }
 
-/* Popup container - can be anything you want */
-.popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-  }
-  
-  /* The actual popup */
-  .popup .popuptext {
-    width: 120px;
-    background-color: #fff;
-    color: #555;
-    font-size: 13px;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    bottom: 125%;
-    left: 50%;
-    margin-bottom: -25px;
-    margin-left: 35px;
-    border: 1px solid #555;
-  }
-
-  /* Add animation (fade in the popup) */
-  .popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1000ms;
-    animation: fadeIn 1000ms;
-  }
-
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-  }
-  
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;} 
-  }
-
-  .popup .noshow {
-    visibility: hidden;
-    -webkit-animation: fadeOut 1000ms;
-    animation: fadeOut 1000ms;
-  }
-
-  @-webkit-keyframes fadeOut {
-    from {opacity: 1;
-        visibility: visible;} 
-    to {opacity: 0;
-        visibility:hidden;}
-    
-  }
-  
-  @keyframes fadeOut {
-    from {opacity: 1;
-        visibility: visible;} 
-    to {opacity: 0;
-        visibility:hidden;}
-  }
-
-
-.copy-notification {
-    color: #555;
-    font-size: 13px;
-    background-color: #fff;
-    border-radius: 6px;
-    padding: 8px 0;
-    border: 1px solid #555;
-    position: absolute;
-    top:0;
-    right: 0;
-    width: 120px;
-    display: none;
-    text-align:center;
-}
-
-#test
-{
-    position: relative;
-}
-
-#test2
-{
-    position: relative;
 }
 
 

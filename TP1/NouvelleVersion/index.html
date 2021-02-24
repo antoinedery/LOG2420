@@ -122,8 +122,8 @@
                                 <li class="name col-6"><p>Ampoules</p></li>                               
                             </ul>
                             
-                            <p>Autres :</p>
-                            <textarea id="box-comment"></textarea>
+                            <p id="other-textarea">Autres :</p>
+                            <textarea id="box-comment" placeholder="Autres"></textarea>
                             <br>
                             <button class="order-btn" onclick="confirmOrder(event)">Commander</button>
                         </form>
@@ -181,43 +181,52 @@
                         <!--end Modal4-->
                         
                     </div>
+
                     <div class="col-4">
                         <h2>Bottin</h2> 
                        <ul>
-                            <li id="test2">
-                                <h5>Michel Gagnon - Gestionnaire entretien</h5>
-                                <span id="michel">michel.gagnon.967@gmail.com</span>
-                                <img src="icons/copy.svg" alt="copy-img" class="copyImage" onclick="CopyToClipboard('michel.gagnon.967@gmail.com')">
+                            <li class="list-employees copyMail">
+                                <div class="employee employee-mobile">
+                                    <h5>Michel Gagnon - Gestionnaire entretien</h5>
+                                    <span>michel.gagnon.967@gmail.com</span>
+                                </div>
+                                <img src="icons/copy.svg" alt="copy-img" class="copyImage" onclick="CopyToClipboard('michel.gagnon.967@gmail.com', 0)">
                             </li>
 
-                            <li>
-                                <h5>Simon Tremblay - Préposé entretien</h5>
-                                <span id="simon">stremblay3450@videotron.ca</span>
-                                <img src="icons/copy.svg" alt="copy-img" class="copyImage" onclick="copyToClipboard('simon')">
+                            <li class="list-employees copyMail">
+                                <div class="employee employee-mobile">
+                                    <h5>Simon Tremblay - Préposé entretien</h5>
+                                    <span>stremblay3450@videotron.ca</span>
+                                </div>
+                                <img src="icons/copy.svg" alt="copy-img" class="copyImage" onclick="CopyToClipboard('stremblay3450@videotron.ca', 1)">
                             </li>
 
-                            <li id="test">
-                                <h5>Robert Roy - Préposé entretien</h5>
-                                <span id="robert">robert.roy345@outlook.com</span>
-                                <img src="icons/copy.svg" alt="copy-img" class="copyImage" onclick="CopyToClipboard('robert.roy345@outlook.com')">
+                            <li class="list-employees copyMail">
+                                <div class="employee employee-mobile">
+                                    <h5>Robert Roy - Préposé entretien</h5>
+                                    <span>robert.roy345@outlook.com</span>
+                                </div>
+                                <img src="icons/copy.svg" alt="copy-img" class="copyImage" onclick="CopyToClipboard('robert.roy345@outlook.com', 2)">
                             </li>
                             
-                            <li>
-                                <h5>Fanny Côté - Préposé entretien</h5>
-                                <span id="fanny">fcote3450@videotron.ca</span>
-                                    <div class="popup" onclick="myFunction('fanny')"><img src="icons/copy.svg" alt="copy-img" class="copyImage">
-                                        <span class="popuptext" id=myPopup>Adresse copiée</span>
-                                    </div>
+                            <li class="list-employees copyMail">
+                                <div class="employee employee-mobile">
+                                    <h5>Fanny Côté - Préposé entretien</h5>
+                                    <span>fcote3450@videotron.ca</span>
+                                </div>
+                                <img src="icons/copy.svg" alt="copy-img" class="copyImage" onclick="CopyToClipboard('fcote3450@videotron.ca', 3)">
                             </li>
 
-                            <li>
-                                <h5>Robert Morin - Préposé entretien</h5>
-                                <span id="robert2">robert.roy345@outlook.com</span>
-                                <img src="icons/copy.svg" alt="copy-img" class="copyImage" onclick="copyToClipboard('robert2')">
+                            <li class="list-employees copyMail">
+                                <div class="employee employee-mobile">
+                                    <h5>Robert Morin - Préposé entretien</h5>
+                                    <span>rmorin0233450@videotron.ca</span>
+                                </div>
+                                <img src="icons/copy.svg" alt="copy-img" class="copyImage" onclick="CopyToClipboard('rmorin0233450@videotron.ca', 4)">
                             </li>
                         </ul>
-                       
                     </div>
+
                     <div class="col-4">
                         <h2>Compostage et partenaires</h2> 
                         <ul>
