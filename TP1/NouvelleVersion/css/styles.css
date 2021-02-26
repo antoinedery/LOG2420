@@ -72,8 +72,8 @@ li
     justify-content: center;
 }
 
-/*---------------------------Modal11: Public modal--------------------------------*/
-.public-modal-bg{
+/*---------------------------Modal1: LogOut modal--------------------------------*/
+.logOut-modal-bg{
     background: rgba(0, 0, 0, 0.55);
     display:flex;
     justify-content: center;
@@ -87,46 +87,92 @@ li
     opacity: 0;
 }
 
-.public-modal-wrapper{
-    background-color: white;
-    position: relative;
-    border-radius: 5px;
-    left: 15px;
-    top: 70px;
-    width: 335px;
-    height: 330px;
-    justify-content: space-between;
-    margin: 20px 0 0 17px;
+.logOut-modal-bg-active{
+    visibility:visible;
+    opacity:1;
 }
 
-.public-modal-footer{
-    position:absolute;
+.logOut-modal-wrapper{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 337px;
+    height: 330px;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(121, 121, 121, 1);
+    border-radius: 5px;
+    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.349019607843137);
+    -webkit-box-shadow: 2px 2px 5px rgb(0 0 0 / 35%);
+    box-shadow: 2px 2px 5px rgb(0 0 0 / 35%);
+    z-index: 1;
+    /*visibility: hidden;
+    opacity: 0;*/
+}
+.logOut-modal-header{
+    color: #8C8C8C;
+    border-bottom: 1.4px solid gainsboro;
+    position: relative;
     display:flex;
+    padding:15px 15px;
+    align-items:center;
+    font-size: 24px;
+    width: 100%;
+    height:20%;
+
+}
+
+.logOut-modal-body{
+    color: #8C8C8C;
+    border-bottom: 1.4px solid black;
+    padding:15px 15px;
+    align-items:center;
+    font-size: 18px;
+    top:100px;
+    width: 100%;
+    height:60%;
+}
+
+.logO-modal-footer{
+    /*position:relative;*/
+    display:flex;
+    align-items:center;
     justify-content: flex-end;
+    width: 100%;
+    height: 20%;
+    padding : 0 15px;
 }
 
 .annuler-btn{
-    background-color: rgba(0, 140, 140, 1);
+    background-color: rgba(255, 255, 255, 1);
+    color:rgba(0, 140, 140, 1);
     border-width: 0px;
-    position: absolute;
+    position: relative;
     left: 0px;
     top: 0px;
     width: 126px;
     height: 40px;
+    border:none;
     box-shadow: none;
+    outline: none;
     font-size: 18px;
+    float: left;
 }
 
 .ok-btn{
     background-color: rgba(0, 140, 140, 1);
+    color:white;
+    border-radius: 5px;
     border-width: 0px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
+    position: relative;
     width: 126px;
     height: 40px;
     box-shadow: none;
     font-size: 18px;
+    outline: none;
+    float: right;
 }
 
 /*------------------------------Nouvelle1 modal------------------------------*/
@@ -253,6 +299,11 @@ input::-webkit-inner-spin-button {
     align-items: center;
 }
 
+.stepper-mobile
+{
+    display:none;
+}
+
 #box-comment {
     border: none;
     resize: none;
@@ -261,6 +312,11 @@ input::-webkit-inner-spin-button {
     height: 80px;
     font-size: inherit;
     font-family: inherit;
+}
+
+#box-comment::placeholder
+{
+    color:transparent;
 }
 
 .order-btn{
@@ -340,6 +396,8 @@ input::-webkit-inner-spin-button {
     font-size: 21px;
     font-weight: bold;
     cursor: pointer;
+    outline: none;
+    
 }
 
 .order-modal-bg-active{
@@ -349,6 +407,41 @@ input::-webkit-inner-spin-button {
 
 /*----------------------------------------------------------------------------*/
 /*------------------------------End Order section-----------------------------*/
+/*Desktop copy/paste popup*/
+.employee-mobile
+{
+    display:none;
+}
+
+.employee
+{
+    display:inline;
+}
+
+.copyImage
+{
+    cursor: pointer;
+}
+
+.copy-notification {
+    color: #555;
+    font-size: 13px;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 8px 0;
+    border: 1px solid #555;
+    position: absolute;
+    top:0;
+    right:0;
+    width: 120px;
+    display: none;
+    text-align:center;
+}
+
+.copyMail
+{
+    position: relative;
+}
 
 a:link, a:visited, a:hover {
     color: inherit;
@@ -364,38 +457,6 @@ a:link, a:visited, a:hover {
     width: 129px;
     height: 45px;
 }
-
-/*------------------------------Mini popUp section--------------------------------*/
-.popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-
-  .popup .popuptext {
-    visibility: hidden;
-    width: 160px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -80px;
-  }
-  
-  .popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-  }
 
 /*------------------------------End mini popUp section----------------------------*/
 
@@ -482,6 +543,45 @@ a:link, a:visited, a:hover {
     .col-5 {width: 50%;}
     .col-3 {width: 50%;}
     .col-2 {width: 25%;}
+
+    .order
+    {
+        width:265px;
+    }
+
+
+    li.col-4
+    {
+        width : 33.33%;
+    }
+
+    .order input{
+        width:85%;
+        display:flex;
+        align-self: flex-end;
+    }
+
+    .list-employees
+    {
+        display:flex;
+    }
+
+    .employee
+    {
+        display: none;
+    }
+
+    .employee-mobile
+    {
+        display:inline;
+        width:100%;
+    }
+
+    .copyImage
+    {
+        width:33px;
+        height: 33px;
+    }
 }
 
 @media only screen and (max-width: 500px){
@@ -490,16 +590,15 @@ a:link, a:visited, a:hover {
     }
     .col-2 {width: 25%;}
 
-    .top-container{
+    /*.top-container{
         position: fixed; 
     }
 
     .main-window{
-
         top: 13vh;
         height: 87vh;
-        overflow: overlay;
-    }
+        overflow:overlay;
+    }*/
 
     .main-window::-webkit-scrollbar {
         width: 6px;
@@ -517,75 +616,89 @@ a:link, a:visited, a:hover {
     .modal-wraper{
         max-width: 1000px;
     }
+
+    .stepper, .stepper-img
+    {
+        display: none;
+    }
+
+    .order
+    {
+        width:265px;
+    }
+
+    .stepper-mobile{
+        display:flex;
+        align-items: center;
+        padding:0;
+        width:80px;
+        height: 35px;
+        border-radius:5px;
+        border-style: solid;
+        border-width: 1.5px;
+        border-color: grey;
+    }
+
+    #box-comment::placeholder
+    {
+        color:grey;
+    }
+
+
+    /*bouton +/- pour mobile*/
+    .stepper-mobile span
+    {
+        font-size: 28px;
+        text-align: center;
+        vertical-align: center;
+        width:100%;
+    }
+
+    .order input {
+        width:80%;
+        height: 35px;
+    }
+
+    li.col-4
+    {
+        width:60%;
+    }
+
+    li.stepper.col-2
+    {
+        width:10%;
+    }
+
+    .order li {
+        list-style-type: none;
+        padding: 0;
+        margin:0;
+        display:flex;
+        justify-content: center;
+    }
+
+    .order p
+    {
+        font-size:15px;
+    }
+
+    #other-textarea
+    {
+        display:none;
+    }
+
+    #box-comment {
+        width: 100%;
+        height: 40px;
+        padding: 10px 5px;
+        color:black;
+        /*resize: none;
+        white-space: nowrap;*/
+    }
+
+    #box-comment::placeholder
+    {
+        display:contents;
+    }
+
 }
-
-/*Nhat-an's shit*/
-
-/* Popup container - can be anything you want */
-.popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  
-  /* The actual popup */
-  .popup .popuptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: #fff;
-    color: #555;
-    font-size: 13px;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -80px;
-    border: 1px solid #555;
-  }
-
-  /* Toggle this class - hide and show the popup*/
-  .popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-  }
-  
-  /* Add animation (fade in the popup) */
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-  }
-  
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;} 
-  }
-  
-  .popup .noshow {
-    visibility: visible;
-    -webkit-animation: fadeOut 1s;
-    animation: fadeOut 1s;
-  }
-
-  /* weird shit*/
-  @-webkit-keyframes fadeOut {
-    from {opacity: 1;} 
-    to {opacity: 0;}
-  }
-  
-  @keyframes fadeOut {
-    from {opacity: 1;}
-    to {opacity:0 ;}
-  }
-
-
-
-
-

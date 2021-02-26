@@ -5,12 +5,40 @@
         <link rel="shortcut icon" href="https://d1h0x9w88ijkiq.cloudfront.net/3717a/images/favicon_play.ico" />
         <title>Accueil_service</title>
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/N.an's shit.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     </head>
     <body>
+
+        <!--N.an's shit-->
+        
+<div id="id01" class="modal">
+    <form class="modal-content animate" action="/action_page.php" method="post">
+
+        <h3 style="padding: 15px;">Accès à l'espace membre</h3> 
+        
+      <div class="container">
+        <label for="uname"><p>Nom d'utilisateur</p> <input type="checkbox" name="remember"> Bénévole</label>
+        <input type="text" placeholder="Entrer un nom d'utilisateur" name="uname" required>
+  
+        <label for="psw"><p>Mot de passe</p></label>
+        <input type="password" placeholder="Entrer un mot de passe" name="psw" required>
+          
+        <button class="cnct-btn" type="submit">Connecter</button>
+
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">Annuler</span>
+        </div>
+
+      </div>
+    </form>
+  </div>
+
+  <!-- end of N.an's shit-->
         
         <div class="top-container">
                 <div class="logout-public">
-                    <img class="logout-btn" src="icons/logout.svg" alt="logout-img">
+                    <img class="logout-btn"  style="cursor:pointer" src="icons/logout.svg" alt="logout-img">
                   <p class="upper-text">Public</p> 
                 </div>
                 
@@ -27,18 +55,22 @@
 
         <!-- Modal1 -->
         <!-- Must to keep it because it's different from others modal -->
-        <div class="public-modal-bg">
-            <div class="public-modal-wrapper">
-                <div class= "public-modal-header">
-                    Quitter l'espace membre
+        <div class="logOut-modal-bg">
+            <div class="logOut-modal-wrapper">
+
+                <div class= "logOut-modal-header">
+                    <h4>Quitter l'espace membre</h4>
                 </div> 
-                <div class="public-modal-body">
-                    Voulez-vous quitter l'espace membre? Tant que vous serez contecté, vous pouvez revenir librement.
+
+                <div class="logOut-modal-body">
+                    Voulez-vous quitter l'espace membre? Tant que vous serez connecté, vous pouvez revenir librement.
                 </div>
-                <div class="public-modal-footer">
+
+                <div class="logOut-modal-footer">
                     <button class="annuler-btn" onclick="myFunction()">Annuler</button>
-                    <button class="ok-btn" onclick="myFunction()">Ok</button>
+                    <button class="ok-btn" onclick="okbutton()">Ok</button>
                 </div>
+
             </div>
         </div>
         <!--end Modal1-->
@@ -76,9 +108,11 @@
                     </div>
                     <div class="col-4 box-border">
                         <h2>Commande du matériel</h2> 
-                        <div class="order">
+                        <form class="order">
                             <ul>
-                                <li class="col-4"><input type="text" value="0" id="first-counter"></li>
+                                <div class="stepper-mobile" onclick="incrementCounter('first-counter')"><span>+</span></div>
+                                <li class="col-4"><input type="text" value="0" id="1"></li>
+                                <div class="stepper-mobile" onclick="decrementCounter('first-counter')"><span>-</span></div>
                                 <li class="stepper col-2"> 
                                     <img src="icons/arrow_up.svg" class="stepper-img" onclick="incrementCounter('first-counter')">
                                     <img src="icons/arrow_down.svg" class="stepper-img" onclick="decrementCounter('first-counter')">
@@ -87,7 +121,9 @@
                             </ul>   
                             
                             <ul>
+                                <div class="stepper-mobile" onclick="incrementCounter('second-counter')"><span>+</span></div>
                                 <li class="col-4"><input type="text" value="0" id="second-counter"></li>
+                                <div class="stepper-mobile" onclick="decrementCounter('second-counter')"><span>-</span></div>
                                 <li class="stepper col-2"> 
                                     <img src="icons/arrow_up.svg" class="stepper-img" onclick="incrementCounter('second-counter')">
                                     <img src="icons/arrow_down.svg" class="stepper-img" onclick="decrementCounter('second-counter')">
@@ -96,7 +132,9 @@
                             </ul>  
 
                             <ul>
+                                <div class="stepper-mobile" onclick="incrementCounter('third-counter')"><span>+</span></div>
                                 <li class="col-4"><input type="text" value="0" id="third-counter"></li>
+                                <div class="stepper-mobile" onclick="decrementCounter('third-counter')"><span>-</span></div>
                                 <li class="stepper col-2"> 
                                     <img src="icons/arrow_up.svg" class="stepper-img" onclick="incrementCounter('third-counter')">
                                     <img src="icons/arrow_down.svg" class="stepper-img" onclick="decrementCounter('third-counter')">
@@ -105,18 +143,21 @@
                             </ul>  
 
                             <ul>
+                                <div class="stepper-mobile" onclick="incrementCounter('fourth-counter')"><span>+</span></div>
                                 <li class="col-4"><input type="text" value="0" id="fourth-counter"></li>
+                                <div class="stepper-mobile" onclick="decrementCounter('fourth-counter')"><span>-</span></div>
                                 <li class="stepper col-2"> 
                                     <img src="icons/arrow_up.svg" class="stepper-img" onclick="incrementCounter('fourth-counter')">
                                     <img src="icons/arrow_down.svg" class="stepper-img" onclick="decrementCounter('fourth-counter')">
-                                </li> 
+                                </li>
                                 <li class="name col-6"><p>Ampoules</p></li>                               
                             </ul>
                             
-                            <p>Autres :</p>
-                            <textarea id="box-comment"></textarea>
+                            <p id="other-textarea">Autres :</p>
+                            <textarea id="box-comment" placeholder="Autres"></textarea>
                             <br>
-                            <button class="order-btn" onclick="returnCounter()">Commander</button>
+                            <button class="order-btn" onclick="confirmOrder(event)">Commander</button>
+                        </form>
                             <!-- Modal3-->
                             <!-- Must to keep it because it's different from others modal -->
                             <div class="order-modal-bg">
@@ -132,12 +173,11 @@
                                         <p id="ampoules"></p>
                                         <p id="autres"></p>
                                         <br>
-                                        Vous serez avisé lorsque les items commandés seront à votre disposition au siège de l’association Frigocommunautaire sur au 4525 Rue Clark, Montréal, QC. </p1>
+                                        Vous serez avisé lorsque les items commandés seront à votre disposition au siège de l’association Frigocommunautaire sur au 4525 Rue Clark, Montréal, QC.
                                     </div>
                                 </div>
                             </div>
                             <!--end Modal3-->
-                        </div>
                     </div>
                 </div>
             </div>
@@ -172,25 +212,52 @@
                         <!--end Modal4-->
                         
                     </div>
+
                     <div class="col-4">
                         <h2>Bottin</h2> 
                        <ul>
-                            <li><h5>Michel Gagnon - Gestionnaire entretien</h5><span id="michel">michel.gagnon.967@gmail.com</span>&nbsp;<img src="icons/copy.svg" alt="copy-img" onclick="copyToClipboard('michel')"></li>
-                            <li><h5>Simon Tremblay - Préposé entretien</h5><span>stremblay3450@videotron.ca</span>  &nbsp; <img src="icons/copy.svg" alt="copy-img"></li>
-                            <li><h5>Robert Roy - Préposé entretien</h5><span>robert.roy345@outlook.com</span> &nbsp; <img src="icons/copy.svg" alt="copy-img"></li>
-                            
-                            <li>
-                                <h5>Fanny Côté - Préposé entretien</h5>
-                                <span>fcote3450@videotron.ca</span> &nbsp;
-                                    <div class="popup" onclick="myFunction()"><img src="icons/copy.svg" alt="copy-img">
-                                        <span class="popuptext" id="myPopup">Adresse copiée</span>
-                                    </div>
+                            <li class="list-employees copyMail">
+                                <div class="employee employee-mobile">
+                                    <h5>Michel Gagnon - Gestionnaire entretien</h5>
+                                    <span>michel.gagnon.967@gmail.com</span>
+                                </div>
+                                <img src="icons/copy.svg" alt="copy-img" class="copyImage" onclick="CopyToClipboard('michel.gagnon.967@gmail.com', 0)">
                             </li>
 
-                            <li><h5>Robert Morin - Préposé entretien</h5><p>rrmorin3450@videotron.ca  &nbsp; <img src="icons/copy.svg" alt="copy-img"></p></li>
+                            <li class="list-employees copyMail">
+                                <div class="employee employee-mobile">
+                                    <h5>Simon Tremblay - Préposé entretien</h5>
+                                    <span>stremblay3450@videotron.ca</span>
+                                </div>
+                                <img src="icons/copy.svg" alt="copy-img" class="copyImage" onclick="CopyToClipboard('stremblay3450@videotron.ca', 1)">
+                            </li>
+
+                            <li class="list-employees copyMail">
+                                <div class="employee employee-mobile">
+                                    <h5>Robert Roy - Préposé entretien</h5>
+                                    <span>robert.roy345@outlook.com</span>
+                                </div>
+                                <img src="icons/copy.svg" alt="copy-img" class="copyImage" onclick="CopyToClipboard('robert.roy345@outlook.com', 2)">
+                            </li>
+                            
+                            <li class="list-employees copyMail">
+                                <div class="employee employee-mobile">
+                                    <h5>Fanny Côté - Préposé entretien</h5>
+                                    <span>fcote3450@videotron.ca</span>
+                                </div>
+                                <img src="icons/copy.svg" alt="copy-img" class="copyImage" onclick="CopyToClipboard('fcote3450@videotron.ca', 3)">
+                            </li>
+
+                            <li class="list-employees copyMail">
+                                <div class="employee employee-mobile">
+                                    <h5>Robert Morin - Préposé entretien</h5>
+                                    <span>rmorin0233450@videotron.ca</span>
+                                </div>
+                                <img src="icons/copy.svg" alt="copy-img" class="copyImage" onclick="CopyToClipboard('rmorin0233450@videotron.ca', 4)">
+                            </li>
                         </ul>
-                       
                     </div>
+
                     <div class="col-4">
                         <h2>Compostage et partenaires</h2> 
                         <ul>
