@@ -11,7 +11,7 @@
         <div class="header">
             <div class="logout-left col-2">
                 <div>
-                    <img class="btn-logout-left" src="icons/logout.svg" alt="logout-img">
+                    <img class="btn-logout-left" src="icons/logout.svg" alt="logout-img" onclick="openModalLogOut()">
                     <p>Public</p> 
                 </div>
             </div>
@@ -47,8 +47,6 @@
                             <button class="order-btn" onclick="confirmOrder(event)">Commander</button>
                         </form>
                     </div>
-
-
 
                 </div>
             </div>
@@ -89,6 +87,25 @@
             <div class="modal-box">
                 <img class="modal-close-btn" onclick="closeModal()" src="icons/close-button.svg" alt="close-botton img">
                 <div id="modal-content"></div>
+            </div>
+        </div>
+
+        <div id="logOut-modal-bg">
+            <div id="logOut-modal-wrapper">
+
+                <div class= "logOut-modal-header">
+                    <h4>Quitter l'espace membre</h4>
+                </div> 
+
+                <div class="logOut-modal-body">
+                    Voulez-vous quitter l'espace membre? Tant que vous serez connecté, vous pouvez revenir librement.
+                </div>
+
+                <div class="logOut-modal-footer">
+                    <button class="annuler-btn" onclick="closeModalLogOut()">Annuler</button>
+                    <button class="ok-btn" type="submit" onclick="logOut()">OK</button>
+                </div>
+
             </div>
         </div>
 

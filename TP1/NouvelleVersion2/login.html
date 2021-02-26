@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="https://d1h0x9w88ijkiq.cloudfront.net/3717a/images/favicon_play.ico" />
+        <title>Authentification</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/login.css">
+    </head>
+
+    <body>
+
+        <div id="id01" class="modal">
+            <div class="modal-content">
+                <h2>Accès à l'espace membre</h2> 
+
+                <div class="logIn-modal-body">
+
+                    <div class="login-header">
+                        <p class="username">Nom d'utilisateur</p>
+                        <div class="checkbox">
+                            <input type="checkbox" id="volunteer">
+                            <p>Bénévole</p>
+                        </div>
+                    </div>
+
+                    <input type="text" id="username" placeholder="Entrer un nom d'utilisateur">
+
+                    <div id="wrong-credentials">
+                        <span>Les données saisies sont invalides</span>
+                    </div>
+
+                    <p>Mot de passe</p>
+                    <input type="password" id="password" placeholder="Entrer un mot de passe">
+                </div>
+    
+                <div class="logIn-modal-footer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close">Annuler</span>
+                    <button onclick="logIn()" class="connect-btn" type="submit">Connecter</button>
+                </div>
+
+            </div>
+        </div>
+
+    </body>
+    <script src="functions.js"></script>
+</html>

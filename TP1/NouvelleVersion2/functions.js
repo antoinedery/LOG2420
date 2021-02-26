@@ -16,10 +16,10 @@ function loadNews(newsList){
     var output = '';
     for(var i = 0; i < newsList.length; i++){
         output +=   '<li>'+
-                        '<h4  style="cursor:pointer" onclick="popUp(\'' + newsList[i].title + '\',\'' + '<p>' + newsList[i].content + '</p>' + '\')">' + 
+                        '<h4  style="cursor:pointer" onclick="openModal(\'' + newsList[i].title + '\',\'' + '<p>' + newsList[i].content + '</p>' + '\')">' + 
                             newsList[i].title +
                         '</h4>' +
-                        '<p style="cursor:pointer" onclick="popUp(\'' + newsList[i].title + '\',\'' + '<p>' + newsList[i].content + '</p>' + '\')">' + 
+                        '<p style="cursor:pointer" onclick="openModal(\'' + newsList[i].title + '\',\'' + '<p>' + newsList[i].content + '</p>' + '\')">' + 
                             newsList[i].content + 
                         '</p>'+ 
                     '</li>';
@@ -32,7 +32,7 @@ function loadGuides(guidesList){
     var output = '';
     for(var i = 0; i < guidesList.length; i++){
         output +=   '<li>'+
-                        '<h4 style="cursor:pointer" onclick="popUp(\'' + guidesList[i].title + '\',\'' + '<p>' + guidesList[i].content + '</p>' + '\')">' + 
+                        '<h4 style="cursor:pointer" onclick="openModal(\'' + guidesList[i].title + '\',\'' + '<p>' + guidesList[i].content + '</p>' + '\')">' + 
                             guidesList[i].title + 
                         '</h4>'+
                     '</li>';
@@ -153,14 +153,14 @@ function confirmOrder(event) {
     
     output += '<p>' + "Vous serez avisé lorsque les items commandés seront à votre disposition au siège de l’association Frigocommunautaire sur au 4525 Rue Clark, Montréal, QC." + '</p>';
 
-    popUp("Confirmation", output);
+    openModal("Confirmation", output);
   }
 
 /*********************modal*************************/
 
 var modal = document.getElementById("modal-wrapper");
 
-function popUp(title, content){ 
+function openModal(title, content){ 
     document.querySelector("body").style.overflow = 'hidden';
     modal.style.display = "flex"; 
     document.getElementById('modal-content').innerHTML = '';
@@ -169,6 +169,18 @@ function popUp(title, content){
 
 function closeModal(){ 
     modal.style.display = "none"; 
+    document.querySelector("body").style.overflow = 'auto';
+}
+
+var modalLogOut = document.getElementById("logOut-modal-bg");
+
+function openModalLogOut(){ 
+    document.querySelector("body").style.overflow = 'hidden';
+    modalLogOut.style.display = "flex"; 
+}
+
+function closeModalLogOut(){ 
+    modalLogOut.style.display = "none"; 
     document.querySelector("body").style.overflow = 'auto';
 }
 
@@ -195,3 +207,20 @@ function CopyToClipboard(value, iteration) {
       }, 1000);
     });
   }
+
+/*********************LogIn/LogOut*************************/
+function logIn() {
+  let username = document.getElementById("username").value;
+  let password = document.getElementById("password").value;
+  let volunteer = document.getElementById("volunteer");
+
+  if (username == "jbradette" && password =="123456" && volunteer.checked)
+    window.open("index.html", "_self");
+  else
+    document.getElementById("wrong-credentials").style.display = "block";
+}
+
+function logOut()
+{
+  window.open("login.html", "_self");
+}

@@ -5,40 +5,14 @@
         <link rel="shortcut icon" href="https://d1h0x9w88ijkiq.cloudfront.net/3717a/images/favicon_play.ico" />
         <title>Accueil_service</title>
         <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="css/N.an's shit.css">
+        <link rel="stylesheet" href="css/login.css">
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     </head>
     <body>
 
-        <!--N.an's shit-->
-        
-<div id="id01" class="modal">
-    <form class="modal-content animate" action="/action_page.php" method="post">
-
-        <h3 style="padding: 15px;">Accès à l'espace membre</h3> 
-        
-      <div class="container">
-        <label for="uname"><p>Nom d'utilisateur</p> <input type="checkbox" name="remember"> Bénévole</label>
-        <input type="text" placeholder="Entrer un nom d'utilisateur" name="uname" required>
-  
-        <label for="psw"><p>Mot de passe</p></label>
-        <input type="password" placeholder="Entrer un mot de passe" name="psw" required>
-          
-        <button class="cnct-btn" type="submit">Connecter</button>
-
-        <div class="imgcontainer">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">Annuler</span>
-        </div>
-
-      </div>
-    </form>
-  </div>
-
-  <!-- end of N.an's shit-->
-        
-        <div class="top-container">
+    <div class="top-container">
                 <div class="logout-public">
-                    <img class="logout-btn"  style="cursor:pointer" src="icons/logout.svg" alt="logout-img">
+                    <img class="logout-btn"  style="cursor:pointer" src="icons/logout.svg" alt="logout-img" onclick="openModalLogOut()">
                   <p class="upper-text">Public</p> 
                 </div>
                 
@@ -55,8 +29,8 @@
 
         <!-- Modal1 -->
         <!-- Must to keep it because it's different from others modal -->
-        <div class="logOut-modal-bg">
-            <div class="logOut-modal-wrapper">
+         <div id="logOut-modal-bg">
+            <div id="logOut-modal-wrapper">
 
                 <div class= "logOut-modal-header">
                     <h4>Quitter l'espace membre</h4>
@@ -66,13 +40,18 @@
                     Voulez-vous quitter l'espace membre? Tant que vous serez connecté, vous pouvez revenir librement.
                 </div>
 
-                <div class="logOut-modal-footer">
-                    <button class="annuler-btn" onclick="myFunction()">Annuler</button>
-                    <button class="ok-btn" onclick="okbutton()">Ok</button>
+                <div class="logIn-modal-footer">
+                    <button class="annuler-btn" onclick="closeModalLogOut()">Annuler</button>
+                    <button class="connect-btn" type="submit" onclick="logOut()">OK</button>
                 </div>
 
             </div>
         </div>
+
+        
+
+
+
         <!--end Modal1-->
         
         <div class="main-window">

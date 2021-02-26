@@ -11,16 +11,16 @@ const modalCleaningBg = document.querySelector('.nettoyage-modal-bg');
 const modalCleaningClose = document.querySelector('.nettoyage-btn-close');
 
 const modalLogOutBtn = document.querySelector('.logout-btn');
-const modalLogOutBg = document.querySelector('.public-modal-bg');
+const modalLogOutBg = document.querySelector('.logOut-modal-bg');
 const modalLogOutClose = document.querySelector('.annuler-btn');
 
 /*---------------------------Logout Modal---------------------------------*/
 modalLogOutBtn.addEventListener('click', function () {
-  modalLogOutBg.classList.add('public-modal-bg-active');
+  modalLogOutBg.classList.add('logOut-modal-bg-active');
 })
 
 modalLogOutClose.addEventListener('click', function () {
-  modalLogOutBg.classList.remove('public-modal-bg-active');
+  modalLogOutBg.classList.remove('logOut-modal-bg-active');
 })
 
 
@@ -132,7 +132,7 @@ function CopyToClipboard(value, iteration) {
 
   var notificationTag = $("div.copy-notification");
   notificationTag = $("<div/>", { "class": "copy-notification", text: "Adresse copiée" });
-  $(".list-employees").eq(iteration).append(notificationTag); /*Changer la valeur de 'iteration' pour l'iteration dans le bottin du JSON .. marche slmt si id dans html*/
+  $(".list-employees").eq(iteration).append(notificationTag); 
 
   notificationTag.fadeIn("slow", function () {
     setTimeout(function () {
@@ -184,4 +184,38 @@ function loadOrder(orderList)
     }
     document.getElementById('content-order').innerHTML = '';
     document.getElementById('content-order').innerHTML += output;
+}
+
+function logIn()
+{
+  let username = document.getElementById("username").value;
+  let password = document.getElementById("password").value;
+  let volunteer = document.getElementById("volunteer");
+
+  if (username == "jbradette" && password =="123456" && volunteer.checked)
+  {
+    window.open("index.html", "_self");
+  }
+  else{
+    document.getElementById("wrong-credentials").style.display = "block";
+  } 
+}
+
+function logOut()
+{
+  window.open("login.html", "_self");
+}
+
+/*Modal*/
+
+var modal = document.getElementById("logOut-modal-bg");
+
+function openModalLogOut(){ 
+    document.querySelector("body").style.overflow = 'hidden';
+    modal.style.display = "flex"; 
+}
+
+function closeModalLogOut(){ 
+    modal.style.display = "none"; 
+    document.querySelector("body").style.overflow = 'auto';
 }
