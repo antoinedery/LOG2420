@@ -5,13 +5,40 @@
         <link rel="shortcut icon" href="https://d1h0x9w88ijkiq.cloudfront.net/3717a/images/favicon_play.ico" />
         <title>Accueil_service</title>
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/N.an's shit.css">
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     </head>
     <body>
+
+        <!--N.an's shit-->
+        
+<div id="id01" class="modal">
+    <form class="modal-content animate" action="/action_page.php" method="post">
+
+        <h3 style="padding: 15px;">Accès à l'espace membre</h3> 
+        
+      <div class="container">
+        <label for="uname"><p>Nom d'utilisateur</p> <input type="checkbox" name="remember"> Bénévole</label>
+        <input type="text" placeholder="Entrer un nom d'utilisateur" name="uname" required>
+  
+        <label for="psw"><p>Mot de passe</p></label>
+        <input type="password" placeholder="Entrer un mot de passe" name="psw" required>
+          
+        <button class="cnct-btn" type="submit">Connecter</button>
+
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">Annuler</span>
+        </div>
+
+      </div>
+    </form>
+  </div>
+
+  <!-- end of N.an's shit-->
         
         <div class="top-container">
                 <div class="logout-public">
-                    <img class="logout-btn" src="icons/logout.svg" alt="logout-img">
+                    <img class="logout-btn"  style="cursor:pointer" src="icons/logout.svg" alt="logout-img">
                   <p class="upper-text">Public</p> 
                 </div>
                 
@@ -28,18 +55,18 @@
 
         <!-- Modal1 -->
         <!-- Must to keep it because it's different from others modal -->
-        <div class="public-modal-bg">
-            <div class="public-modal-wrapper">
+        <div class="logOut-modal-bg">
+            <div class="logOut-modal-wrapper">
 
-                <div class= "public-modal-header">
+                <div class= "logOut-modal-header">
                     <h4>Quitter l'espace membre</h4>
                 </div> 
 
-                <div class="public-modal-body">
+                <div class="logOut-modal-body">
                     Voulez-vous quitter l'espace membre? Tant que vous serez connecté, vous pouvez revenir librement.
                 </div>
 
-                <div class="public-modal-footer">
+                <div class="logOut-modal-footer">
                     <button class="annuler-btn" onclick="myFunction()">Annuler</button>
                     <button class="ok-btn" onclick="okbutton()">Ok</button>
                 </div>
@@ -84,7 +111,7 @@
                         <form class="order">
                             <ul>
                                 <div class="stepper-mobile" onclick="incrementCounter('first-counter')"><span>+</span></div>
-                                <li class="col-4"><input type="text" value="0" id="first-counter"></li>
+                                <li class="col-4"><input type="text" value="0" id="1"></li>
                                 <div class="stepper-mobile" onclick="decrementCounter('first-counter')"><span>-</span></div>
                                 <li class="stepper col-2"> 
                                     <img src="icons/arrow_up.svg" class="stepper-img" onclick="incrementCounter('first-counter')">
@@ -146,7 +173,7 @@
                                         <p id="ampoules"></p>
                                         <p id="autres"></p>
                                         <br>
-                                        Vous serez avisé lorsque les items commandés seront à votre disposition au siège de l’association Frigocommunautaire sur au 4525 Rue Clark, Montréal, QC. </p1>
+                                        Vous serez avisé lorsque les items commandés seront à votre disposition au siège de l’association Frigocommunautaire sur au 4525 Rue Clark, Montréal, QC.
                                     </div>
                                 </div>
                             </div>

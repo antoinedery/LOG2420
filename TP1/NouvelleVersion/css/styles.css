@@ -72,8 +72,8 @@ li
     justify-content: center;
 }
 
-/*---------------------------Modal1: Public modal--------------------------------*/
-.public-modal-bg{
+/*---------------------------Modal1: LogOut modal--------------------------------*/
+.logOut-modal-bg{
     background: rgba(0, 0, 0, 0.55);
     display:flex;
     justify-content: center;
@@ -87,21 +87,17 @@ li
     opacity: 0;
 }
 
-.public-modal-wrapper{
-    /*background-color: white;
-    position: relative;
-    border-radius: 5px;
-    left: 15px;
-    top: 70px;
-    width: 335px;
-    height: 330px;
-    justify-content: space-between;
-    margin: 20px 0 0 17px;*/
+.logOut-modal-bg-active{
+    visibility:visible;
+    opacity:1;
+}
+
+.logOut-modal-wrapper{
     position: relative;
     left: 0px;
     top: 0px;
     width: 337px;
-    height: 331px;
+    height: 330px;
     background-color: rgba(255, 255, 255, 1);
     box-sizing: border-box;
     border-width: 1px;
@@ -111,36 +107,42 @@ li
     -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.349019607843137);
     -webkit-box-shadow: 2px 2px 5px rgb(0 0 0 / 35%);
     box-shadow: 2px 2px 5px rgb(0 0 0 / 35%);
+    z-index: 1;
+    /*visibility: hidden;
+    opacity: 0;*/
 }
-.public-modal-header{
+.logOut-modal-header{
     color: #8C8C8C;
     border-bottom: 1.4px solid gainsboro;
     position: relative;
     display:flex;
+    padding:15px 15px;
     align-items:center;
     font-size: 24px;
     width: 100%;
-    height:20.5%;
+    height:20%;
 
 }
 
-.public-modal-body{
+.logOut-modal-body{
     color: #8C8C8C;
     border-bottom: 1.4px solid black;
-    position: absolute;
-    display:flex;
+    padding:15px 15px;
     align-items:center;
     font-size: 18px;
+    top:100px;
     width: 100%;
-    height:58.5%;
+    height:60%;
 }
 
-.public-modal-footer{
-    position:relative;
+.logO-modal-footer{
+    /*position:relative;*/
     display:flex;
     align-items:center;
+    justify-content: flex-end;
     width: 100%;
-    height: 140%;
+    height: 20%;
+    padding : 0 15px;
 }
 
 .annuler-btn{
@@ -405,6 +407,7 @@ input::-webkit-inner-spin-button {
 
 /*----------------------------------------------------------------------------*/
 /*------------------------------End Order section-----------------------------*/
+/*Desktop copy/paste popup*/
 .employee-mobile
 {
     display:none;
@@ -455,32 +458,6 @@ a:link, a:visited, a:hover {
     height: 45px;
 }
 
-/*------------------------------Mini popUp section--------------------------------*/
-.popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-
-  .popup .popuptext {
-    visibility: hidden;
-    width: 160px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -80px;
-  }
-  
 /*------------------------------End mini popUp section----------------------------*/
 
 /*-------------------------Modal4: Nettoyage modal------------------------*/
@@ -662,6 +639,12 @@ a:link, a:visited, a:hover {
         border-color: grey;
     }
 
+    #box-comment::placeholder
+    {
+        color:grey;
+    }
+
+
     /*bouton +/- pour mobile*/
     .stepper-mobile span
     {
@@ -719,8 +702,3 @@ a:link, a:visited, a:hover {
     }
 
 }
-
-
-
-
-

@@ -10,6 +10,18 @@ const modalNewsClose = document.querySelector('.news-btn-close');
 const modalCleaningBg = document.querySelector('.nettoyage-modal-bg');
 const modalCleaningClose = document.querySelector('.nettoyage-btn-close');
 
+const modalLogOutBtn = document.querySelector('.logout-btn');
+const modalLogOutBg = document.querySelector('.public-modal-bg');
+const modalLogOutClose = document.querySelector('.annuler-btn');
+
+/*---------------------------Logout Modal---------------------------------*/
+modalLogOutBtn.addEventListener('click', function () {
+  modalLogOutBg.classList.add('public-modal-bg-active');
+})
+
+modalLogOutClose.addEventListener('click', function () {
+  modalLogOutBg.classList.remove('public-modal-bg-active');
+})
 
 
 /*---------------------------News Modal---------------------------------*/
@@ -45,22 +57,21 @@ modalCleaningClose.addEventListener('click', function () {
 
 /*--------------------------Order counter list-------------------------*/
 /*Incrémenter le compteur dans la section Commande du matériel*/
-function incrementCounter(id) {
-  let value = document.getElementById(id).value;
+function incrementCounter(iterator) {
+  let value = document.getElementsByClassName("orderItem")[iterator].value;
   if (value >= 0) //Evite d'afficher des valeurs négatives
-    document.getElementById(id).value = ++value;
+    document.getElementsByClassName("orderItem")[iterator].value = ++value;
   else
-    document.getElementById(id).value = 0;
-
+    document.getElementsByClassName("orderItem")[iterator].value = 0;
 }
 
 /*Décrémenter le compteur dans la section Commande du matériel*/
-function decrementCounter(id) {
-  let value = document.getElementById(id).value;
+function decrementCounter(iterator) {
+  let value = document.getElementsByClassName("orderItem")[iterator].value;
   if (value > 0) //Evite d'afficher des valeurs négatives
-    document.getElementById(id).value = --value;
+    document.getElementsByClassName("orderItem")[iterator].value = --value;
   else
-    document.getElementById(id).value = 0;
+    document.getElementsByClassName("orderItem")[iterator].value = 0;
 }
 
 /*Sauvegarder les données de la commande dans un JSON*/
@@ -69,10 +80,10 @@ function confirmOrder(event) {
   event.preventDefault();                                 //Prevent the page from reloading on form submission
 
   let item = {
-    savon: document.getElementById('first-counter').value,
-    guenilles: document.getElementById('second-counter').value,
-    desodorisant: document.getElementById('third-counter').value,
-    ampoules: document.getElementById('fourth-counter').value,
+    savon: document.getElementsByClassName('orderItem')[0].value,
+    guenilles: document.getElementsByClassName('orderItem')[1].value,
+    desodorisant: document.getElementsByClassName('orderItem')[2].value,
+    ampoules: document.getElementsByClassName('orderItem')[3].value,
     autres: document.getElementById('box-comment').value
   }
   items.push(item);                                       //Store item into array
@@ -130,4 +141,47 @@ function CopyToClipboard(value, iteration) {
       });
     }, 1000);
   });
+}
+
+
+
+
+/*For loop order*/
+function getData()
+{
+    $.getJSON('./test.json', 
+    function(data)
+    {
+        loadOrder(data.Order)
+    }
+    );
+}
+
+function loadOrder(orderList)
+{
+    let output = '';
+    for(let i = 0; i < orderList.length; i++){
+        output +=   '<ul>' +
+                        '<div class="stepper-mobile" onclick="incrementCounter(\'' + i + '\')">'+
+                          '<span>+</span>' +
+                        '</div>' +
+                        '<li class="col-4">'+
+                          '<input type="text" value="0" class="orderItem">' +
+                        '</li>' +
+
+                        '<div class="stepper-mobile" onclick="decrementCounter(\'' + i + '\')">'+
+                          '<span>-</span>'+
+                        '</div>' +
+
+                        '<li class="stepper col-2">' +
+                            '<img src="icons/arrow_up.svg" class="stepper-img" onclick="incrementCounter(\'' + i + '\')">' +
+                            '<img src="icons/arrow_down.svg" class="stepper-img" onclick="decrementCounter(\'' + i + '\')">' +
+                        '</li> '+                               
+                        '<li class="name col-6">' +
+                          '<p>' + orderList[i].title + '</p>'+
+                        '</li>'+
+                    '</ul>';
+    }
+    document.getElementById('content-order').innerHTML = '';
+    document.getElementById('content-order').innerHTML += output;
 }
