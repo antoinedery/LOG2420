@@ -1,0 +1,77 @@
+{
+    "News": [
+      {
+        "title": "Nouveau site web transactionnel",
+        "content": "Après de nombreux mois d’efforts, Frigoscommunautaire.org est ravie d’annoncer le lancement officiel de notre nouveau site Web en ligne. Ce site est entré en service le 1er février 2021 avec une nouvelle interface interactionnelle. Les membres de l’association disposent maintenant de l’avantage supplémentaire de pouvoir en tout temps donner et prendre des repas et aliments dans les différents frigos sur le territoire de Montréal. Avec ce nouveau site, les membres de Frigoscommunautaire.org bénéficient de nouvelles fonctionnalités telles que des frigos numériques affichant différents types d’information sur tous les aliments disponibles tels que le nombre de portions, les allergéniques présents et la date de péremption. Les preneurs pourront réserver des aliments en les ajoutant à leurs paniers électroniques avant de passer aux frigos pour les récupérer. Le nouveau site averti les donateurs qu’utilisent leurs propres contenants lorsqu’ils sont retournés au frigo d’origine dument nettoyés. Le nouveau site aide dans la formation des bénévoles et les supporte dans les différents flux d’information associés aux tâches de nettoyage et entretien des frigos. Ils peuvent tenir le système d’information tout à fait actualisé sur l’état (nettoyé et fonctionnel) des frigos ainsi que sur l’inventaire des aliments disponibles."
+      },
+      {
+        "title": "A diam sollicitudin tempor",
+        "content": "Vestibulum sed justo sit amet mauris ullamcorper maximus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent fringilla mauris id justo condimentum euismod. Aenean placerat magna eu erat consequat semper. Aliquam auctor, libero non posuere elementum, magna ligula hendrerit est, a tincidunt massa purus eu dui. Suspendisse sapien metus, rhoncus eu leo eget, tincidunt fermentum purus. Mauris lobortis dignissim porttitor. Duis dolor sapien, aliquet et interdum eu, viverra vitae nibh. Curabitur a nisi vitae nibh tempor rutrum eget quis urna. Suspendisse luctus scelerisque nulla non eleifend. Sed hendrerit at lorem in suscipit. Nulla orci ante, tempor sed sem in, fermentum porta lorem. Duis non turpis magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent consequat odio id erat iaculis iaculis. Etiam a risus eu nibh sollicitudin tristique. Quisque sapien orci, ornare ut nisl non, tristique pellentesque sem. Sed pharetra aliquam gravida. Proin ut velit vel mi convallis dictum nec et ex. In justo lacus, auctor sit amet fringilla sed, tincidunt quis nisi."
+      },
+      {
+        "title": "Lorem ipsum dolor sit amet",
+        "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra vel elit ac vulputate. Praesent mollis et massa a feugiat. Vestibulum quis posuere risus. Mauris pulvinar a lorem nec semper. Nullam ac quam pharetra, dignissim nunc in, porta magna. Cras scelerisque feugiat nisl, ac lacinia quam lacinia nec. Vestibulum eget lacus euismod, dignissim est nec, vehicula elit."
+      },
+      {
+        "title":"Consequat interdum varius sit amet",
+        "content": "Donec bibendum, tellus at sodales condimentum, diam sapien posuere libero, dapibus finibus lacus lacus a massa. Aenean sed posuere lacus. Fusce a lorem libero. Phasellus tincidunt, est nec sollicitudin mollis, augue elit ullamcorper turpis, sed tincidunt ipsum metus ac sem. In id sagittis enim. Pellentesque nibh nibh, rutrum nec ligula non, commodo efficitur augue. Phasellus a elementum augue. Nunc vitae tortor et felis porttitor molestie mollis vel magna. Aenean suscipit ex nec justo dictum iaculis a fermentum lacus. Donec dignissim metus vel varius vehicula. Curabitur ornare nec lorem a pulvinar. Aliquam erat volutpat. Praesent ornare enim at lacus sollicitudin facilisis. Curabitur vitae imperdiet dolor, eget vestibulum purus. Donec ligula leo, dapibus ut est at, aliquet tincidunt velit. Fusce ut vestibulum sem, et imperdiet diam. Sed elementum, velit in maximus iaculis, orci mi luctus augue, nec fermentum neque nulla non dui. Curabitur scelerisque leo eget arcu cursus viverra. Pellentesque vitae est sapien. Nam sit amet sapien ullamcorper, egestas massa ac, vehicula augue."
+      }
+    ],
+
+    "Guides": [
+      {
+        "title": "Nettoyage et vérifications générales",
+        "content": "Les portes d’un réfrigérateur se ferment hermétiquement grâce aux joints en caoutchouc (généralement blancs) situées tout autour des portes. Une saleté excessive pourrait empêche les joints de bien isoler l’espace entre le cabinet et la porte de réfrigérateur, ce qui causera une fuite d’air. Cette fuite fera augmenter la température et donc surchauffer le compresseur. Une autre conséquence est que la saleté pourrait causer l’adhérence du joint, qui, s’il reste collé, pourrait déchirer lors de l’ouverture de la porte. Pour éviter tous ces tracas, prenez 5 minutes une fois par mois pour les nettoyer à l’aide d’un linge humide pour éliminer les saletés. Changer un joint de porte peut coûter plus de 150$! Des frais facilement évitables Réf https://service2000.ca/eviter-reparations-de-refrigerateur/"
+      },
+      {
+        "title": "Nettoyage des serpentins  du condenseur",
+        "content": "Vestibulum sed justo sit amet mauris ullamcorper maximus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent fringilla mauris id justo condimentum euismod. Aenean placerat magna eu erat consequat semper. Aliquam auctor, libero non posuere elementum, magna ligula hendrerit est, a tincidunt massa purus eu dui. Suspendisse sapien metus, rhoncus eu leo eget, tincidunt fermentum purus. Mauris lobortis dignissim porttitor. Duis dolor sapien, aliquet et interdum eu, viverra vitae nibh. Curabitur a nisi vitae nibh tempor rutrum eget quis urna. Suspendisse luctus scelerisque nulla non eleifend. Sed hendrerit at lorem in suscipit. Nulla orci ante, tempor sed sem in, fermentum porta lorem. Duis non turpis magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent consequat odio id erat iaculis iaculis. Etiam a risus eu nibh sollicitudin tristique. Quisque sapien orci, ornare ut nisl non, tristique pellentesque sem. Sed pharetra aliquam gravida. Proin ut velit vel mi convallis dictum nec et ex. In justo lacus, auctor sit amet fringilla sed, tincidunt quis nisi."
+      },
+      {
+        "title": "Dégivrage",
+        "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra vel elit ac vulputate. Praesent mollis et massa a feugiat. Vestibulum quis posuere risus. Mauris pulvinar a lorem nec semper. Nullam ac quam pharetra, dignissim nunc in, porta magna. Cras scelerisque feugiat nisl, ac lacinia quam lacinia nec. Vestibulum eget lacus euismod, dignissim est nec, vehicula elit."
+      },
+      {
+        "title": "Vérification du système de drainage",
+        "content": "Donec bibendum, tellus at sodales condimentum, diam sapien posuere libero, dapibus finibus lacus lacus a massa. Aenean sed posuere lacus. Fusce a lorem libero. Phasellus tincidunt, est nec sollicitudin mollis, augue elit ullamcorper turpis, sed tincidunt ipsum metus ac sem. In id sagittis enim. Pellentesque nibh nibh, rutrum nec ligula non, commodo efficitur augue. Phasellus a elementum augue. Nunc vitae tortor et felis porttitor molestie mollis vel magna. Aenean suscipit ex nec justo dictum iaculis a fermentum lacus. Donec dignissim metus vel varius vehicula. Curabitur ornare nec lorem a pulvinar. Aliquam erat volutpat. Praesent ornare enim at lacus sollicitudin facilisis. Curabitur vitae imperdiet dolor, eget vestibulum purus. Donec ligula leo, dapibus ut est at, aliquet tincidunt velit. Fusce ut vestibulum sem, et imperdiet diam. Sed elementum, velit in maximus iaculis, orci mi luctus augue, nec fermentum neque nulla non dui. Curabitur scelerisque leo eget arcu cursus viverra. Pellentesque vitae est sapien. Nam sit amet sapien ullamcorper, egestas massa ac, vehicula augue."
+      }
+    ],
+
+    "Bottin": [
+      {
+        "title": "Michel Gagnon - Gestionnaire entretien",
+        "content": "michel.gagnon.967@gmail.com"
+      },
+      {
+        "title": "Simon Tremblay - Préposé entretien",
+        "content": "stremblay3450@videotron.ca"
+      },
+      {
+        "title": "Robert Roy - Préposé entretien",
+        "content": "robert.roy345@outlook.com"
+      },
+      {
+        "title": "Fanny Côté - Préposé entretien",
+        "content": "fcote3450@videotron.ca"
+      },
+      {
+        "title": "Robert Morin - Préposé entretien",
+        "content": "rrmorin3450@videotron.ca"
+      }
+    ],
+
+    "Order": [
+      {
+        "title": "Savon"
+      },
+      {
+        "title": "Guénilles"
+      },
+      {
+        "title": "Désodorisant"
+      },
+      {
+        "title": "Ampoules"
+      }
+    ]
+}
