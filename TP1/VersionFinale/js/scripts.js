@@ -1,6 +1,6 @@
 function getData()
 {
-    $.getJSON('./data.json', 
+    $.getJSON('./js/data.json', 
     function(data)
     {
         loadNews(data.News);
@@ -11,10 +11,10 @@ function getData()
     );
 }
 
-/***********************Loading JSON data ************************/
+/***********************Loading JSON data************************/
 function loadNews(newsList){
-    var output = '';
-    for(var i = 0; i < newsList.length; i++){
+    let output = '';
+    for(let i = 0; i < newsList.length; i++){
         output +=   '<li>'+
                         '<h4  style="cursor:pointer" onclick="openModal(\'' + newsList[i].title + '\',\'' + '<p>' + newsList[i].content + '</p>' + '\')">' + 
                             newsList[i].title +
@@ -29,8 +29,8 @@ function loadNews(newsList){
 }
 
 function loadGuides(guidesList){
-    var output = '';
-    for(var i = 0; i < guidesList.length; i++){
+    let output = '';
+    for(let i = 0; i < guidesList.length; i++){
         output +=   '<li>'+
                         '<h4 style="cursor:pointer" onclick="openModal(\'' + guidesList[i].title + '\',\'' + '<p>' + guidesList[i].content + '</p>' + '\')">' + 
                             guidesList[i].title + 
@@ -42,8 +42,8 @@ function loadGuides(guidesList){
 }
 
 function loadBottin(bottinList){
-    var output = '';
-    for(var i = 0; i < bottinList.length; i++){
+    let output = '';
+    for(let i = 0; i < bottinList.length; i++){
        output += '<li class="list-employees copyMail">' +
                     '<div class="employee employee-mobile">'+
                         '<h5>' + 
@@ -89,7 +89,7 @@ function loadOrder(orderList)
     document.getElementById('content-order').innerHTML += output;
 }
 
-/**********************ORDER_FUNCTIONS *************************/
+/**********************ORDER_FUNCTIONS*************************/
 function incrementCounter(iterator) {
   let value = document.getElementsByClassName("orderItem")[iterator].value;
   if (value >= 0) 
@@ -119,14 +119,12 @@ function confirmOrder(event) {
       autres: document.getElementById('box-comment').value
     }
     items.push(item);
-  
-    sessionStorage.setItem("Order", JSON.stringify(items)); //Save to session storage
-  
-    displayOrder();                                        
+        
+    displayOrder(JSON.stringify(items));                    //Save order data to JSON                                 
   }
   
-  function displayOrder() {
-    let object = JSON.parse(sessionStorage.getItem("Order"));
+  function displayOrder(jsonData) {
+    let object = JSON.parse(jsonData);
     let order = object[0];
   
     output = '';
@@ -156,7 +154,7 @@ function confirmOrder(event) {
     openModal("Confirmation", output);
   }
 
-/*********************modal*************************/
+/*********************MODAL*************************/
 
 var modal = document.getElementById("modal-wrapper");
 
@@ -164,7 +162,7 @@ function openModal(title, content){
     document.querySelector("body").style.overflow = 'hidden';
     modal.style.display = "flex"; 
     document.getElementById('modal-content').innerHTML = '';
-    document.getElementById('modal-content').innerHTML += '<h3>' + title + '</h3>' + content /*'<p>' + content + '</p>'*/;
+    document.getElementById('modal-content').innerHTML += '<h3>' + title + '</h3>' + content;
 }
 
 function closeModal(){ 
@@ -172,7 +170,7 @@ function closeModal(){
     document.querySelector("body").style.overflow = 'auto';
 }
 
-var modalLogOut = document.getElementById("logOut-modal-bg");
+var modalLogOut = document.getElementById("logOut-modal-wrapper");
 
 function openModalLogOut(){ 
     document.querySelector("body").style.overflow = 'hidden';
@@ -185,17 +183,16 @@ function closeModalLogOut(){
 }
 
 /*********************CopyPopup*************************/
-
 function CopyToClipboard(value, iteration) {
     /*Copy to clipboard*/
-    var $temp = $("<input>");
+    let $temp = $("<input>");
     $("body").append($temp);
     $temp.val(value).select();
     document.execCommand("copy");
     $temp.remove();
 
     /*Pop-up*/
-    var notificationTag = $("div.copy-notification");
+    let notificationTag = $("div.copy-notification");
     notificationTag = $("<div/>", { "class": "copy-notification", text: "Adresse copiée" });
     $(".list-employees").eq(iteration).append(notificationTag); /*Changer la valeur de 'iteration' pour l'iteration dans le bottin du JSON .. marche slmt si id dans html*/
   

@@ -10,13 +10,13 @@
 
     <body>
 
-        <div id="id01" class="modal">
-            <div class="modal-content">
+        <div id="login" class="LogIn-modal-wrapper">
+            <div class="LogIn-modal-box">
                 <h2>Accès à l'espace membre</h2> 
 
                 <div class="logIn-modal-body">
 
-                    <div class="login-header">
+                    <div class="logIn-modal-header">
                         <p class="username">Nom d'utilisateur</p>
                         <div class="checkbox">
                             <input type="checkbox" id="volunteer">
@@ -35,7 +35,7 @@
                 </div>
     
                 <div class="logIn-modal-footer">
-                    <span onclick="document.getElementById('id01').style.display='none'" class="close">Annuler</span>
+                    <span onclick="document.getElementById('login').style.display='none'" class="close">Annuler</span>
                     <button onclick="logIn()" class="connect-btn" type="submit">Connecter</button>
                 </div>
 
@@ -43,5 +43,5 @@
         </div>
 
     </body>
-    <script src="functions.js"></script>
+    <script src="js/scripts.js"></script>
 </html>

@@ -1,4 +1,4 @@
-.modal {
+.LogIn-modal-wrapper {
   position: fixed;
   left: 0;
   top: 0;
@@ -10,7 +10,7 @@
   justify-content: center;
 }
 
-.modal-content {
+.LogIn-modal-box {
   background-color: white;
   border: 1px solid #888;
   width: 400px;
@@ -82,7 +82,7 @@ button {
   width: 100%;
 }
 
-.login-header{
+.logIn-modal-header{
   display: flex;
 }
 

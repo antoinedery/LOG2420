@@ -11,7 +11,7 @@
         <div class="header">
             <div class="logout-left col-2">
                 <div>
-                    <img class="btn-logout-left" src="icons/logout.svg" alt="logout-img" onclick="openModalLogOut()">
+                    <img id="btn-logout-left" src="icons/logout.svg" alt="logout-img" onclick="openModalLogOut()">
                     <p>Public</p> 
                 </div>
             </div>
@@ -23,7 +23,7 @@
             </div> 
             <div class="logout-right col-2">
                 <div>
-                    <img src="icons/arrow_right.svg" alt="arrow-right img">
+                    <img id="btn-logout-right" src="icons/arrow_right.svg" alt="arrow-right img">
                     <p>Mes frigos</p>
                 </div>
             </div>
@@ -90,8 +90,8 @@
             </div>
         </div>
 
-        <div id="logOut-modal-bg">
-            <div id="logOut-modal-wrapper">
+        <div id="logOut-modal-wrapper">
+            <div id="logOut-modal-box">
 
                 <div class= "logOut-modal-header">
                     <h4>Quitter l'espace membre</h4>
@@ -102,7 +102,7 @@
                 </div>
 
                 <div class="logOut-modal-footer">
-                    <button class="annuler-btn" onclick="closeModalLogOut()">Annuler</button>
+                    <button class="cancel-btn" onclick="closeModalLogOut()">Annuler</button>
                     <button class="ok-btn" type="submit" onclick="logOut()">OK</button>
                 </div>
 
@@ -111,6 +111,6 @@
 
     </body>
 
-    <script src="functions.js"></script> 
+    <script src="js/scripts.js"></script> 
 
 </html>
